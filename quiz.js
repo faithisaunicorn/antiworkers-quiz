@@ -1,0 +1,287 @@
+const QUESTIONS = [
+  {
+    text: "Q1. You open your inbox. There are 972 unread emails. What do you do?",
+    options: [
+      { value: "A", text: "Mark all as read. If it’s important, they’ll call." },
+      { value: "B", text: "Start colour-coding by urgency, sender, and emotional damage." },
+      { value: "C", text: "Crawl under the desk and practice shallow breathing." }
+    ]
+  },
+  {
+    text: "Q2. You’re put in charge of a meeting titled “Optimising the Optimisation Strategy.” How do you survive?",
+    options: [
+      { value: "A", text: "Make 12 slides that say the same thing in different fonts." },
+      { value: "B", text: "Bribe attendees with snacks and end early." },
+      { value: "C", text: "Start with a philosophical quote to confuse everyone." }
+    ]
+  },
+  {
+    text: "Q3. An intern gives you a spreadsheet titled “Emotions_Quarterly_FINALv7.xlsx.” How do you respond?",
+    options: [
+      { value: "A", text: "Cry a little. Rename it “Feelings_2025_FINAL_FINAL2”." },
+      { value: "B", text: "Add a pie chart titled “Regret”." },
+      { value: "C", text: "Set conditional formatting to turn everything red." }
+    ]
+  },
+  {
+    text: "Q4. You’re tired from staring at spreadsheets all day. A coworker invites you to “coffee and vibes” in the break room. What do you bring?",
+    options: [
+      { value: "A", text: "Your trauma journal, annotated." },
+      { value: "B", text: "A homemade juice labeled “Productivity Potion.”" },
+      { value: "C", text: "Nothing. You *are* the vibe." }
+    ]
+  },
+  {
+    text: "Q5. In the break room, the microwave starts to tremble. With a low hum and the smell of burnt popcorn, it shifts aside to reveal a swirling portal pulsing with a purple glow. It’s….a gateway. But to where?",
+    options: [
+      { value: "A", text: "A sacred sourdough shrine." },
+      { value: "B", text: "A wizened talking frog wearing a mysterious cape." },
+      { value: "C", text: "A coffee dimension where time stops but work continues." }
+    ]
+  }
+];
+
+const BRANCH_QUESTIONS = {
+  A: {
+    text: "Q6A. The scent of fermentation is oddly comforting. You find yourself in a warm, glowing bakery where loaves levitate and hum Gregorian chants in gluten. A sourdough starter bubbles in a crystal jar on an altar, glowing like radioactive kombucha.<br>What do you ask this sagely sourdough?",
+    options: [
+      { value: "A", text: "“Am I rising, or just fermenting?”" },
+      { value: "B", text: "“Do you think I should quit?”" },
+      { value: "C", text: "“Can I nap here while you proof?”" }
+    ]
+  },
+  B: {
+    text: "Q6B. You land in a floating conference room made of lily pads. A single frog sits at the head of the table, donning a velvet cape and the aura of someone who’s read too much Nietzsche. He adjusts his glasses. Then croaks: “The self is a spreadsheet – blank until you fill it.”<br>How do you respond?",
+    options: [
+      { value: "A", text: "“I knew therapy was just vibes.”" },
+      { value: "B", text: "“Is this part of orientation?”" },
+      { value: "C", text: "“What happens if I leave it empty forever?”" }
+    ]
+  },
+  C: {
+    text: "Q6C. You emerge into a cave that smells stronger than a Starbucks. Espresso pours from waterfalls, and everything smells like ambition and late nights. The Coffee Oracle floats toward you, robes made of coffee-stained receipts. She hands you a lukewarm cup of coffee labelled “Decaf.”<br>What’s your next move?",
+    options: [
+      { value: "A", text: "Hurl it into the time void – lukewarm coffee should be illegal." },
+      { value: "B", text: "Finish the whole cup in one big gulp because you’re thirsty." },
+      { value: "C", text: "Ask if it’s deductible as a business expense." }
+    ]
+  }
+};
+
+const REST_QUESTIONS = [
+  {
+    text: "Q7. As you journey through the realm, the air thickens with meaning (or possibly toner fumes). Suddenly, a glowing scroll materializes in your hands. It's The Corporate Prophecy, edged in gold and inexplicably coffee-stained.<br><br>The parchment unfurls itself and declares: “You, valiant employee of questionable attendance, are the Chosen One, destined to bring balance to KPIs and inner peace to meetings that could’ve been emails.”<br><br>What’s your reaction?",
+    options: [
+      { value: "A", text: "“Again? I just want a nap.”" },
+      { value: "B", text: "“Time to unionise the multiverse.”" },
+      { value: "C", text: "“I’ll think this through and get back to you.”" }
+    ]
+  },
+  {
+    text: "Q8. Your surroundings blur like a corrupted Zoom background. You jolt awake at your desk, head stuck to a post-it that says “circle back later.”<br><br>Your inbox is still overflowing. Your badge is still misspelled. But something feels…different. Empowered? Enlightened? Mildly caffeinated? The fluorescent lights above flicker in what might be applause.<br><br>Someone knocks on your cubicle and says, “Are you okay?”",
+    options: [
+      { value: "A", text: "“Haha yeah I was just stretching! For 20 minutes. On the floor.”" },
+      { value: "B", text: "“No, but continue.”" },
+      { value: "C", text: "Panic. Say “You too!” and disappear into the stairwell." }
+    ]
+  },
+  {
+    text: "Q9. You’ve been promoted...perhaps The Corporate Prophecy had something to do with it. Your new title is “Chief Vibes Officer.” With great power comes great responsibility, so what now?",
+    options: [
+      { value: "A", text: "Rearrange the furniture and declare it feng shui." },
+      { value: "B", text: "Host a team nap. HR says nothing." },
+      { value: "C", text: "Start a Slack channel called #radicalrest" }
+    ]
+  },
+  {
+    text: "Q10. The HR Fax Machine starts glowing. It’s calling you to the fourth floor – a floor that doesn’t exist. What now?",
+    options: [
+      { value: "A", text: "Put on your good hoodie. It’s time." },
+      { value: "B", text: "Email yourself a resignation letter “just in case.”" },
+      { value: "C", text: "Jump in. You’ve been training for this since your first group project." }
+    ]
+  }
+];
+
+// App logic
+
+let answers = [];
+let branch = null;
+let qIndex = 0;
+
+function renderIntro() {
+  document.getElementById('app').innerHTML = `
+    <img src="images/antiworkers.jpg" alt="The Antiworkers" style="width:100%;max-width:420px;">
+    <h1>Which Antiworker Are You?</h1>
+    <p>Welcome to The Jobiverse™, a dimension where capitalism has gone rogue and HR is a sentient fax machine. You’ve just woken up at your desk with no memory of how you got here, but you do have an employee badge with your name misspelled and a mysterious onboarding letter (in Comic Sans, font size 12) that reads: <br/>
+    <em>"Your destiny awaits. Navigate the corridors of corporate chaos to discover who you truly are. Beware: the coffee is decaf, and the printers are possessed.”</em></p>
+    <p>✨Ready to find out which exhausted, adorable Antiworker lives inside you?</p>
+    <button onclick="startQuiz()">Let's Get To Work!</button>
+  `;
+  answers = [];
+  branch = null;
+  qIndex = 0;
+}
+
+function startQuiz() {
+  answers = [];
+  branch = null;
+  qIndex = 0;
+  renderQuestion();
+}
+
+function renderQuestion() {
+  if (qIndex < 5) {
+    const q = QUESTIONS[qIndex];
+    renderQuestionUI(q, qIndex + 1, QUESTIONS.length + 5);
+  } else if (qIndex === 5) {
+    branch = answers[4];
+    renderBranchQuestion();
+  } else if (qIndex === 6) {
+    renderQuestionUI(REST_QUESTIONS[0], 7, QUESTIONS.length + 5);
+  } else if (qIndex === 7) {
+    renderQuestionUI(REST_QUESTIONS[1], 8, QUESTIONS.length + 5);
+  } else if (qIndex === 8) {
+    renderQuestionUI(REST_QUESTIONS[2], 9, QUESTIONS.length + 5);
+  } else if (qIndex === 9) {
+    renderQuestionUI(REST_QUESTIONS[3], 10, QUESTIONS.length + 5);
+  } else if (qIndex === 10) {
+    renderEnd();
+  }
+}
+
+function renderQuestionUI(q, number, total) {
+  document.getElementById('app').innerHTML = `
+    <form id="quizForm">
+      <h2>${q.text}</h2>
+      <ul>
+        ${q.options.map(opt => `
+          <li>
+            <button type="button" onclick="submitAnswer('${opt.value}')">${opt.text}</button>
+          </li>
+        `).join("")}
+      </ul>
+      <div class="progress">Question ${number} of ${total}</div>
+    </form>
+  `;
+}
+
+function renderBranchQuestion() {
+  const bq = BRANCH_QUESTIONS[branch];
+  document.getElementById('app').innerHTML = `
+    <form id="quizForm">
+      <h2>${bq.text}</h2>
+      <ul>
+        ${bq.options.map(opt => `
+          <li>
+            <button type="button" onclick="submitBranchAnswer('${opt.value}')">${opt.text}</button>
+          </li>
+        `).join("")}
+      </ul>
+      <div class="progress">Branch Question</div>
+    </form>
+  `;
+}
+
+function submitAnswer(val) {
+  answers.push(val);
+  qIndex++;
+  renderQuestion();
+}
+
+function submitBranchAnswer(val) {
+  answers.push(val);
+  qIndex++;
+  renderQuestion();
+}
+
+function renderEnd() {
+  document.getElementById('app').innerHTML = `
+    <div class="end-page">
+      <p>
+        The HR Fax Machine begins to whir with divine purpose.<br>
+        It ejects a single page with your name (still misspelled), a star-shaped sticker, and the message:<br>
+        <strong>“CONGRATULATIONS. You have completed your journey through The Jobiverse™. Please proceed to the Results Page to discover your true Antiworker identity. And remember: your PTO balance never resets.”</strong>
+        <br>
+        The fax sparks, hums a victory jingle, and bursts into confetti made of recycled leave applications.
+      </p>
+      <button onclick="renderResult()">VIEW MY RESULTS</button>
+    </div>
+  `;
+}
+
+function renderResult() {
+  const mbti = calculateMBTI(answers, branch);
+  const result = findResult(mbti);
+  document.getElementById('app').innerHTML = `
+    <h2>You are: ${result.character}</h2>
+    <img class="character" src="${result.img}" alt="${result.character}">
+    <p>${result.description}</p>
+    <div>
+      <h4>Share your result:</h4>
+      <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent("I got " + result.title + " on 'Which Antiworker Are You?' – Try it: https://faithisaunicorn.github.io/antiworker-quiz-js/")}" target="_blank">Share on Twitter/X</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://faithisaunicorn.github.io/antiworker-quiz-js/" target="_blank">Share on Facebook</a>
+    </div>
+    <div>
+      <h4>Email your result:</h4>
+      <form onsubmit="return sendEmail('${result.title}', '${result.description}')">
+        <input type="email" id="userEmail" placeholder="your@email.com">
+        <button type="submit">Send</button>
+      </form>
+    </div>
+    <div style="margin-top:2em;">
+      <button onclick="renderIntro()">Restart / Retry Quiz</button>
+    </div>
+  `;
+}
+
+function calculateMBTI(answers, branch) {
+  const traits = { E:0, I:0, S:0, N:0, F:0, T:0, J:0, P:0 };
+  const mapping = window.MBTI_SCORES;
+  let ans_map = {};
+  let idx = 0;
+  for (let i=1; i<=5; i++) {
+    ans_map[i] = answers[idx];
+    idx++;
+  }
+  let q6key = "6"+branch;
+  ans_map[q6key] = answers[idx];
+  idx++;
+  for (let i=7; i<=10; i++) {
+    ans_map[i] = answers[idx];
+    idx++;
+  }
+  for (const [q, a] of Object.entries(ans_map)) {
+    const sd = mapping[q];
+    if (sd && sd[a]) {
+      for (const [trait, val] of Object.entries(sd[a])) {
+        traits[trait] += val;
+      }
+    }
+  }
+  let mbti = "";
+  mbti += traits.E >= traits.I ? "E" : "I";
+  mbti += traits.S >= traits.N ? "S" : "N";
+  mbti += traits.F >= traits.T ? "F" : "T";
+  mbti += traits.J >= traits.P ? "J" : "P";
+  return mbti;
+}
+
+function findResult(mbti) {
+  const results = window.ANTIWORKER_RESULTS;
+  for (const res of results) {
+    if (res.mbti.includes(mbti)) return res;
+  }
+  return results[0];
+}
+
+function sendEmail(title, desc) {
+  const email = document.getElementById('userEmail').value;
+  const subject = encodeURIComponent("My Antiworker Quiz Result");
+  const body = encodeURIComponent(`I got ${title} – ${desc}`);
+  window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+  return false;
+}
+
+// Initial render
+renderIntro();
