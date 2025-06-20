@@ -1,6 +1,6 @@
 const QUESTIONS = [
   {
-    text: "Q1. You open your inbox. There are 972 unread emails. What do you do?",
+    text: "You open your inbox. There are 972 unread emails. What do you do?",
     options: [
       { value: "A", text: "Mark all as read. If it’s important, they’ll call." },
       { value: "B", text: "Start colour-coding by urgency, sender, and emotional damage." },
@@ -8,7 +8,7 @@ const QUESTIONS = [
     ]
   },
   {
-    text: "Q2. You’re put in charge of a meeting titled “Optimising the Optimisation Strategy.” How do you survive?",
+    text: "You’re put in charge of a meeting titled “Optimising the Optimisation Strategy.” How do you survive?",
     options: [
       { value: "A", text: "Make 12 slides that say the same thing in different fonts." },
       { value: "B", text: "Bribe attendees with snacks and end early." },
@@ -16,7 +16,7 @@ const QUESTIONS = [
     ]
   },
   {
-    text: "Q3. An intern gives you a spreadsheet titled “Emotions_Quarterly_FINALv7.xlsx.” How do you respond?",
+    text: "An intern gives you a spreadsheet titled “Emotions_Quarterly_FINALv7.xlsx.” How do you respond?",
     options: [
       { value: "A", text: "Cry a little. Rename it “Feelings_2025_FINAL_FINAL2”." },
       { value: "B", text: "Add a pie chart titled “Regret”." },
@@ -24,7 +24,7 @@ const QUESTIONS = [
     ]
   },
   {
-    text: "Q4. You’re tired from staring at spreadsheets all day. A coworker invites you to “coffee and vibes” in the break room. What do you bring?",
+    text: "You’re tired from staring at spreadsheets all day. A coworker invites you to “coffee and vibes” in the break room. What do you bring?",
     options: [
       { value: "A", text: "Your trauma journal, annotated." },
       { value: "B", text: "A homemade juice labeled “Productivity Potion.”" },
@@ -32,7 +32,7 @@ const QUESTIONS = [
     ]
   },
   {
-    text: "Q5. In the break room, the microwave starts to tremble. With a low hum and the smell of burnt popcorn, it shifts aside to reveal a swirling portal pulsing with a purple glow. It’s….a gateway. But to where?",
+    text: "In the break room, the microwave starts to tremble. With a low hum and the smell of burnt popcorn, it shifts aside to reveal a swirling portal pulsing with a purple glow. It’s….a gateway. But to where?",
     options: [
       { value: "A", text: "A sacred sourdough shrine." },
       { value: "B", text: "A wizened talking frog wearing a mysterious cape." },
@@ -43,7 +43,7 @@ const QUESTIONS = [
 
 const BRANCH_QUESTIONS = {
   A: {
-    text: "Q6A. The scent of fermentation is oddly comforting. You find yourself in a warm, glowing bakery where loaves levitate and hum Gregorian chants in gluten. A sourdough starter bubbles in a crystal jar on an altar, glowing like radioactive kombucha.<br>What do you ask this sagely sourdough?",
+    text: "The scent of fermentation is oddly comforting. You find yourself in a warm, glowing bakery where loaves levitate and hum Gregorian chants in gluten. A sourdough starter bubbles in a crystal jar on an altar, glowing like radioactive kombucha.<br>What do you ask this sagely sourdough?",
     options: [
       { value: "A", text: "“Am I rising, or just fermenting?”" },
       { value: "B", text: "“Do you think I should quit?”" },
@@ -51,7 +51,7 @@ const BRANCH_QUESTIONS = {
     ]
   },
   B: {
-    text: "Q6B. You land in a floating conference room made of lily pads. A single frog sits at the head of the table, donning a velvet cape and the aura of someone who’s read too much Nietzsche. He adjusts his glasses. Then croaks: “The self is a spreadsheet – blank until you fill it.”<br>How do you respond?",
+    text: "You land in a floating conference room made of lily pads. A single frog sits at the head of the table, donning a velvet cape and the aura of someone who’s read too much Nietzsche. He adjusts his glasses. Then croaks: “The self is a spreadsheet – blank until you fill it.”<br>How do you respond?",
     options: [
       { value: "A", text: "“I knew therapy was just vibes.”" },
       { value: "B", text: "“Is this part of orientation?”" },
@@ -59,7 +59,7 @@ const BRANCH_QUESTIONS = {
     ]
   },
   C: {
-    text: "Q6C. You emerge into a cave that smells stronger than a Starbucks. Espresso pours from waterfalls, and everything smells like ambition and late nights. The Coffee Oracle floats toward you, robes made of coffee-stained receipts. She hands you a lukewarm cup of coffee labelled “Decaf.”<br>What’s your next move?",
+    text: "You emerge into a cave that smells stronger than a Starbucks. Espresso pours from waterfalls, and everything smells like ambition and late nights. The Coffee Oracle floats toward you, robes made of coffee-stained receipts. She hands you a lukewarm cup of coffee labelled “Decaf.”<br>What’s your next move?",
     options: [
       { value: "A", text: "Hurl it into the time void – lukewarm coffee should be illegal." },
       { value: "B", text: "Finish the whole cup in one big gulp because you’re thirsty." },
@@ -70,7 +70,7 @@ const BRANCH_QUESTIONS = {
 
 const REST_QUESTIONS = [
   {
-    text: "Q7. As you journey through the realm, the air thickens with meaning (or possibly toner fumes). Suddenly, a glowing scroll materializes in your hands. It's The Corporate Prophecy, edged in gold and inexplicably coffee-stained.<br><br>The parchment unfurls itself and declares: “You, valiant employee of questionable attendance, are the Chosen One, destined to bring balance to KPIs and inner peace to meetings that could’ve been emails.”<br><br>What’s your reaction?",
+    text: "As you journey through the realm, the air thickens with meaning (or possibly toner fumes). Suddenly, a glowing scroll materializes in your hands. It's The Corporate Prophecy, edged in gold and inexplicably coffee-stained.<br><br>The parchment unfurls itself and declares: “You, valiant employee of questionable attendance, are the Chosen One, destined to bring balance to KPIs and inner peace to meetings that could’ve been emails.”<br><br>What’s your reaction?",
     options: [
       { value: "A", text: "“Again? I just want a nap.”" },
       { value: "B", text: "“Time to unionise the multiverse.”" },
@@ -78,7 +78,7 @@ const REST_QUESTIONS = [
     ]
   },
   {
-    text: "Q8. Your surroundings blur like a corrupted Zoom background. You jolt awake at your desk, head stuck to a post-it that says “circle back later.”<br><br>Your inbox is still overflowing. Your badge is still misspelled. But something feels…different. Empowered? Enlightened? Mildly caffeinated? The fluorescent lights above flicker in what might be applause.<br><br>Someone knocks on your cubicle and says, “Are you okay?”",
+    text: "Your surroundings blur like a corrupted Zoom background. You jolt awake at your desk, head stuck to a post-it that says “circle back later.”<br><br>Your inbox is still overflowing. Your badge is still misspelled. But something feels…different. Empowered? Enlightened? Mildly caffeinated? The fluorescent lights above flicker in what might be applause.<br><br>Someone knocks on your cubicle and says, “Are you okay?”",
     options: [
       { value: "A", text: "“Haha yeah I was just stretching! For 20 minutes. On the floor.”" },
       { value: "B", text: "“No, but continue.”" },
@@ -86,7 +86,7 @@ const REST_QUESTIONS = [
     ]
   },
   {
-    text: "Q9. You’ve been promoted...perhaps The Corporate Prophecy had something to do with it. Your new title is “Chief Vibes Officer.” With great power comes great responsibility, so what now?",
+    text: "You’ve been promoted...perhaps The Corporate Prophecy had something to do with it. Your new title is “Chief Vibes Officer.” With great power comes great responsibility, so what now?",
     options: [
       { value: "A", text: "Rearrange the furniture and declare it feng shui." },
       { value: "B", text: "Host a team nap. HR says nothing." },
@@ -94,7 +94,7 @@ const REST_QUESTIONS = [
     ]
   },
   {
-    text: "Q10. The HR Fax Machine starts glowing. It’s calling you to the fourth floor – a floor that doesn’t exist. What now?",
+    text: "The HR Fax Machine starts glowing. It’s calling you to the fourth floor – a floor that doesn’t exist. What now?",
     options: [
       { value: "A", text: "Put on your good hoodie. It’s time." },
       { value: "B", text: "Email yourself a resignation letter “just in case.”" },
