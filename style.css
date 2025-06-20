@@ -1,0 +1,66 @@
+body {
+  font-family: 'Comic Sans MS', 'Comic Sans', cursive, sans-serif;
+  background: #fef6f1;
+  color: #372b26;
+  margin: 0;
+  padding: 0;
+}
+main {
+  max-width: 540px;
+  margin: 2em auto 4em auto;
+  background: #fffbe8;
+  border-radius: 18px;
+  box-shadow: 0 3px 15px #e8dac8;
+  padding: 2em;
+}
+button {
+  background: #ffb347;
+  color: #372b26;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  padding: 0.6em 2em;
+  margin: 0.5em 0;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.1s;
+}
+button:hover {
+  background: #ffd580;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin-bottom: 1em;
+}
+.progress {
+  font-size: 0.9em;
+  color: #af6e4d;
+  margin-top: 1.5em;
+  text-align: right;
+}
+footer {
+  text-align: center;
+  margin: 2em 0 0 0;
+  color: #b68a4d;
+  font-size: 0.98em;
+}
+.end-page {
+  background: #fff0e1;
+  border-radius: 12px;
+  padding: 2em 1em;
+  margin: 2em 0;
+  box-shadow: 0 2px 8px #e5c08933;
+}
+img.character {
+  width: 180px;
+  display: block;
+  margin: 1em auto;
+}
+input[type="email"] {
+  padding: 0.3em;
+  border-radius: 5px;
+  border: 1px solid #d2b48c;
+}
