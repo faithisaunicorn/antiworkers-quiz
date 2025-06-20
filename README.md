@@ -1,9 +1,9 @@
-🌀 Welcome to The Jobiverse™ — a dimension where capitalism has gone rogue and HR is a sentient fax machine. You’ve just woken up at your desk with no memory of how you got here, but you do have an employee badge with your name misspelled and a mysterious onboarding letter (in Comic Sans, font size 12) that reads:
+Commercial use of this project is not allowed under any circumstances.
+Please do not use my code, character lore or artwork.
+Modification and/or redistribution of any of my code is not allowed.
+All of the artwork is original and copyrighted, please do not use them without permission.
 
-"Your destiny awaits. Navigate the corridors of corporate chaos to discover who you truly are. Beware: the coffee is decaf, and the printers are possessed.”
+Thanks for respecting my time and the hard work that went into creating this fun quiz!
 
-✨ Ready to find out which exhausted, adorable Antiworker lives inside you?
-
-➡️ Follow @theantiworkers on Instagram & Facebook for weekly comics and existential memes
-➡️ Head over to theantiworkers.com for more lore about the characters and their workplaces
-➡️ Follow the creator, a burnt-out doctor turned comic artist, @faithisaunicorn 
+© 2025 Faith Nadine Choo for The Antiworkers and Chasing Faith And Love
+All Rights Reserved
