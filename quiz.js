@@ -1,3 +1,11 @@
+const QUIZ_PAGE_BACKGROUNDS = [
+ "#e6e1fc", "#fff4c6", "#cee1ff", "#e4ffc5", "#bbdefb", "#fef0d4", "#e0f7fa", "#ffe9c6", "#c8e6c9", "#b3e5fc", "#ffedf7"
+];
+
+function setQuizBackground(index) {
+  document.body.style.background = QUIZ_PAGE_BACKGROUNDS[index] || "#e6e1fc";
+}
+
 const QUESTIONS = [
   {
     text: "You open your inbox. There are 972 unread emails. What do you do?",
@@ -110,6 +118,7 @@ let branch = null;
 let qIndex = 0;
 
 function renderIntro() {
+  setQuizBackground(0);
   document.getElementById('app').innerHTML = `
     <img src="images/antiworkers.jpg" alt="The Antiworkers" style="width:100%;max-width:420px;">
     <h1>Which Antiworker Are You?</h1>
@@ -132,21 +141,27 @@ function startQuiz() {
 
 function renderQuestion() {
   if (qIndex < 5) {
+    setQuizBackground(qIndex + 1); // Q1-Q5
     const q = QUESTIONS[qIndex];
     renderQuestionUI(q, qIndex + 1, QUESTIONS.length + 5);
   } else if (qIndex === 5) {
+    setQuizBackground(6); // Branch Q6
     branch = answers[4];
     renderBranchQuestion();
   } else if (qIndex === 6) {
+    setQuizBackground(7); // Q7
     renderQuestionUI(REST_QUESTIONS[0], 7, QUESTIONS.length + 5);
   } else if (qIndex === 7) {
+    setQuizBackground(8); // Q8
     renderQuestionUI(REST_QUESTIONS[1], 8, QUESTIONS.length + 5);
   } else if (qIndex === 8) {
+    setQuizBackground(9); // Q9
     renderQuestionUI(REST_QUESTIONS[2], 9, QUESTIONS.length + 5);
   } else if (qIndex === 9) {
+    setQuizBackground(10); // Q10
     renderQuestionUI(REST_QUESTIONS[3], 10, QUESTIONS.length + 5);
   } else if (qIndex === 10) {
-    renderEnd();
+    renderEnd(); // End page (results), handled in renderEnd()
   }
 }
 
@@ -196,6 +211,7 @@ function submitBranchAnswer(val) {
 }
 
 function renderEnd() {
+  setQuizBackground(11)
   document.getElementById('app').innerHTML = `
     <div class="end-page">
       <p>
@@ -211,6 +227,7 @@ function renderEnd() {
 }
 
 function renderResult() {
+  setQuizBackground(11);
   const mbti = calculateMBTI(answers, branch);
   const result = findResult(mbti);
   document.getElementById('app').innerHTML = `
