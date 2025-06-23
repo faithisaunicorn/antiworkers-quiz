@@ -59,8 +59,4 @@ img.character {
   display: block;
   margin: 1em auto;
 }
-input[type="email"] {
-  padding: 0.3em;
-  border-radius: 5px;
-  border: 1px solid #d2b48c;
-}
+
