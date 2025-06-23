@@ -239,13 +239,6 @@ function renderResult() {
       <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent("I got " + result.title + " on 'Which Antiworker Are You?' – Try it: https://faithisaunicorn.github.io/antiworker-quiz-js/")}" target="_blank">Share on Twitter/X</a>
       <a href="https://www.facebook.com/sharer/sharer.php?u=https://faithisaunicorn.github.io/antiworker-quiz-js/" target="_blank">Share on Facebook</a>
     </div>
-    <div>
-      <h4>Email your result:</h4>
-      <form onsubmit="return sendEmail('${result.title}', '${result.description}')">
-        <input type="email" id="userEmail" placeholder="your@email.com">
-        <button type="submit">Send</button>
-      </form>
-    </div>
     <div style="margin-top:2em;">
       <button onclick="renderIntro()">Restart / Retry Quiz</button>
     </div>
