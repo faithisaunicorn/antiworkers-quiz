@@ -292,13 +292,5 @@ function findResult(mbti) {
   return results[0];
 }
 
-function sendEmail(title, desc) {
-  const email = document.getElementById('userEmail').value;
-  const subject = encodeURIComponent("My Antiworker Quiz Result");
-  const body = encodeURIComponent(`I got ${title} – ${desc}`);
-  window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-  return false;
-}
-
 // Initial render
 renderIntro();
