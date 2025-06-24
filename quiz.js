@@ -239,8 +239,8 @@ function renderResult() {
       <div class="cta-share">
         <p><strong>If you had fun taking this quiz, send it to your friends or colleagues </strong>– after all, the more spam, the merrier!</p> 
         <p>
-          Share your results on Instagram or Facebook and tag 
-          <a href="https://www.instagram.com/theantiworkers/" target="_blank">@theantiworkers</a>!
+          Where burnout and nihilism meet cuteness. Scroll your stress away, follow  
+          <a href="https://www.instagram.com/theantiworkers/" target="_blank">@theantiworkers</a> on IG/FB for weekly anti-work cartoons.
         </p>
       </div>
     </div>
