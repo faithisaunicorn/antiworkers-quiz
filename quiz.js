@@ -176,7 +176,9 @@ function renderQuestionUI(q, number, total) {
           </li>
         `).join("")}
       </ul>
-      <div class="progress">Question ${number} of ${total}</div>
+      <div class="progress-bar-container">
+        <div class="progress-bar" style="width: ${Math.round((number / total) * 100)}%;"></div>
+      </div>
     </form>
   `;
 }
