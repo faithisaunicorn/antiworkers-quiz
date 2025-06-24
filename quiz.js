@@ -234,15 +234,36 @@ function renderResult() {
     <h2>You are: ${result.character}</h2>
     <img class="character" src="${result.img}" alt="${result.character}">
     <p>${result.description}</p>
+    <button id="download-img-btn">Download Your Result Image</button>
     <div>
       <h4>Share your result:</h4>
       <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent("I got " + result.title + " on 'Which Antiworker Are You?' – Try it: https://faithisaunicorn.github.io/antiworker-quiz-js/")}" target="_blank">Share on Twitter/X</a>
       <a href="https://www.facebook.com/sharer/sharer.php?u=https://faithisaunicorn.github.io/antiworker-quiz-js/" target="_blank">Share on Facebook</a>
+      <div class="cta-share">
+        <p><strong>Send this quiz to your friends or colleagues!</strong></p>
+        <p>
+          Share your results on <a href="https://www.instagram.com/" target="_blank">Instagram</a> or 
+          <a href="https://www.facebook.com/" target="_blank">Facebook</a> and tag 
+          <a href="https://www.instagram.com/theantiworkers/" target="_blank">@theantiworkers</a>!
+        </p>
+      </div>
     </div>
+    <form action="https://formspree.io/f/xrbkyrjd" method="POST" target="_blank" class="subscribe-form">
+      <label for="email">Subscribe for more of The Antiworker's antics (and future merch drops)! </label><br>
+      <input type="email" name="email" id="email" placeholder="your@email.com" required>
+      <button type="submit">Subscribe</button>
+    </form>
     <div style="margin-top:2em;">
       <button onclick="renderIntro()">Restart / Retry Quiz</button>
     </div>
   `;
+  document.getElementById('download-img-btn').onclick = function() {
+    const img = document.querySelector('.character');
+    const link = document.createElement('a');
+    link.href = img.src;
+    link.download = `${result.character}-antiworker.png`;
+    link.click();
+  };
 }
 
 function calculateMBTI(answers, branch) {
