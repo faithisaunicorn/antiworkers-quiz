@@ -237,9 +237,9 @@ function renderResult() {
     <button id="download-img-btn">download/save ur results :)</button>
     <div>
       <div class="cta-share">
-        <p><strong>If you had fun taking this quiz, send it to your friends or colleagues </strong>(after all, the more spam, the merrier!)</p> 
+        <p><strong>If you had fun taking this quiz, send it to your friends or colleagues </strong>– after all, the more spam, the merrier!</p> 
         <p>
-          And be sure to share your results on Instagram or Facebook and tag 
+          Share your results on Instagram or Facebook and tag 
           <a href="https://www.instagram.com/theantiworkers/" target="_blank">@theantiworkers</a>!
         </p>
       </div>
