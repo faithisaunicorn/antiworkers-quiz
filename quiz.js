@@ -236,14 +236,10 @@ function renderResult() {
     <p>${result.description}</p>
     <button id="download-img-btn">Download Your Result Image</button>
     <div>
-      <h4>Share your result:</h4>
-      <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent("I got " + result.title + " on 'Which Antiworker Are You?' – Try it: https://faithisaunicorn.github.io/antiworker-quiz-js/")}" target="_blank">Share on Twitter/X</a>
-      <a href="https://www.facebook.com/sharer/sharer.php?u=https://faithisaunicorn.github.io/antiworker-quiz-js/" target="_blank">Share on Facebook</a>
       <div class="cta-share">
         <p><strong>Send this quiz to your friends or colleagues!</strong></p>
         <p>
-          Share your results on <a href="https://www.instagram.com/" target="_blank">Instagram</a> or 
-          <a href="https://www.facebook.com/" target="_blank">Facebook</a> and tag 
+          Share your results on Instagram or Facebook and tag 
           <a href="https://www.instagram.com/theantiworkers/" target="_blank">@theantiworkers</a>!
         </p>
       </div>
