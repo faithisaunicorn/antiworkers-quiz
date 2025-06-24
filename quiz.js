@@ -234,12 +234,12 @@ function renderResult() {
     <h2>You are: ${result.character}</h2>
     <img class="character" src="${result.img}" alt="${result.character}">
     <p>${result.description}</p>
-    <button id="download-img-btn">Download Your Result Image</button>
+    <button id="download-img-btn">download/save ur results :)</button>
     <div>
       <div class="cta-share">
-        <p><strong>Send this quiz to your friends or colleagues!</strong></p>
+        <p><strong>If you had fun taking this quiz, send it to your friends or colleagues </strong>(after all, the more spam, the merrier!)</p> 
         <p>
-          Share your results on Instagram or Facebook and tag 
+          And be sure to share your results on Instagram or Facebook and tag 
           <a href="https://www.instagram.com/theantiworkers/" target="_blank">@theantiworkers</a>!
         </p>
       </div>
