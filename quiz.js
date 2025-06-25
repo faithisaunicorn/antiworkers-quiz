@@ -195,7 +195,9 @@ function renderBranchQuestion() {
           </li>
         `).join("")}
       </ul>
-      <div class="progress">Branch Question</div>
+      <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 60%;"></div>
+      </div>
     </form>
   `;
 }
