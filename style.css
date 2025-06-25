@@ -41,6 +41,47 @@ li {
   margin-top: 1.5em;
   text-align: right;
 }
+.progress-bar-container {
+  width: 100%;
+  background: #eee;
+  border-radius: 8px;
+  height: 10px;
+  margin: 24px 0 0 0;
+  overflow: hidden;
+}
+.progress-bar {
+  background: linear-gradient(90deg, #fcb900, #ec4899);
+  height: 100%;
+  transition: width 0.4s;
+}
+.cta-share {
+  margin: 1em 0;
+  background: #fffbe8;
+  padding: 1em;
+  border-radius: 10px;
+  border: 1px solid #fcb900;
+}
+.subscribe-form {
+  margin: 2em 0 1em 0;
+  padding: 1em;
+  background: #e0f7fa;
+  border-radius: 8px;
+  border: 1px solid #00bcd4;
+}
+.subscribe-form input[type="email"] {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+.subscribe-form button {
+  background: #ec4899;
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 footer {
   text-align: center;
   margin: 2em 0 0 0;
