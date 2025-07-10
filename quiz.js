@@ -123,7 +123,7 @@ function renderIntro() {
     <div class="container">
       <h1>Which Antiworker Are You?</h1>
       <p>Welcome to The Jobiverse™, a dimension where capitalism has gone rogue and HR is a sentient fax machine.</p>
-      <img src="images/antiworkers.jpg" alt="The Antiworkers" style="width:100%;max-width:420px;">
+      <img src="images/antiworkers.png" alt="The Antiworkers" style="width:100%;max-width:420px;">
       <button class="btn-glow" onclick="renderSecondIntro()">Let's Go!</button>
     </div>
   `;
@@ -138,7 +138,7 @@ function renderSecondIntro() {
     <div class="container">
       <h2>Where am I?</h2>
       <p>You’ve just woken up at your desk with no memory of how you got here, but you do have an employee badge with your name misspelled and a mysterious onboarding letter (in Comic Sans, font size 12) that reads:</p>
-      <img src="images/mysteriousletter.jpg" alt="The Antiworkers" style="width:100%;max-width:420px;">
+      <img src="images/mysteriousletter.png" alt="The Antiworkers" style="width:100%;max-width:420px;">
       <p>✨Ready to find out which exhausted, adorable Antiworker lives inside you?</p>
       <button class="btn-glow" onclick="startQuiz()">Start Quiz</button>
     </div>
