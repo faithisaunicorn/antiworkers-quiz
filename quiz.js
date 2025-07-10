@@ -250,7 +250,6 @@ function renderResult() {
   document.getElementById('app').innerHTML = `
     <h2>You are: ${result.character}</h2>
     <img class="character" src="${result.img}" alt="${result.character}">
-    <p>${result.description}</p>
     <button type="button" class="btn-fixed" button id="download-img-btn">Save your results</button>
     <div>
       <div class="cta-share">
