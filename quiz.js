@@ -123,8 +123,10 @@ function renderIntro() {
     <div class="container">
       <h1>Which Antiworker Are You?</h1>
       <p>Welcome to The Jobiverse™, a dimension where capitalism has gone rogue and HR is a sentient fax machine.</p>
-      <img src="images/antiworkers.png" alt="The Antiworkers" style="width:100%;max-width:420px;">
-      <button class="btn-glow" onclick="renderSecondIntro()">Let's Go!</button>
+      <img src="images/antiworkers.png" alt="The Antiworkers" style="width:100%;">
+      <p align ="center">
+        <button class="btn-glow" style="display: block;" onclick="renderSecondIntro()">Let's Go!</button>
+      </p>
     </div>
   `;
   answers = [];
@@ -185,7 +187,7 @@ function renderQuestionUI(q, number, total) {
       <ul>
         ${q.options.map(opt => `
           <li>
-            <button type="button" class="btn-fixed" onclick="submitAnswer('${opt.value}')">${opt.text}</button>
+            <button type="button" class="btn-fixed" style="width:100%; text-align: left" onclick="submitAnswer('${opt.value}')">${opt.text}</button>
           </li>
         `).join("")}
       </ul>
@@ -204,7 +206,7 @@ function renderBranchQuestion() {
       <ul>
         ${bq.options.map(opt => `
           <li>
-            <button type="button" class="btn-fixed" onclick="submitBranchAnswer('${opt.value}')">${opt.text}</button>
+            <button type="button" class="btn-fixed" style="width:100%; text-align: left" onclick="submitBranchAnswer('${opt.value}')">${opt.text}</button>
           </li>
         `).join("")}
       </ul>
