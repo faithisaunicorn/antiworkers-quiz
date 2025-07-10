@@ -250,7 +250,8 @@ function renderResult() {
   document.getElementById('app').innerHTML = `
     <h2>You are: ${result.character}</h2>
     <img class="character" src="${result.img}" alt="${result.character}">
-    <button type="button" class="btn-fixed" button id="download-img-btn">Save your results</button>
+    ${result.description ? `<p>${result.description}</p>` : ""}
+    <button id="download-img-btn" class="save-btn">Save your results</button>
     <div>
       <div class="cta-share">
         <p><strong>If you had fun taking this quiz, send it to your friends or colleagues </strong>– after all, the more spam, the merrier!</p> 
