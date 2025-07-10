@@ -1,7 +1,7 @@
 body {
   font-family: 'Quicksand', Arial, sans-serif;
-  background: linear-gradient(180deg, #563d7c 0%, #845ec2 100%);
-  color: #372b26;
+  background: linear-gradient(180deg, ##ffedf7 0%, #b3e5fc 100%);
+  color: #000000;
   margin: 0;
   padding: 0;
 }
@@ -13,21 +13,30 @@ main {
   box-shadow: 0 3px 15px #e8dac8;
   padding: 2em;
 }
+
 button {
-  background: #ffb347;
-  color: #372b26;
+  background: #ffe066;
+  color: #653d7c;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 0.9em 2.3em;
   border: none;
-  border-radius: 6px;
-  font-size: 1.1em;
-  padding: 0.6em 2em;
-  margin: 0.5em 0;
+  border-radius: 2em;
+  box-shadow: 0 4px 32px #ffe06644, 0 1.5px 0 #fff6 inset;
+  margin: 1.2em 0 0.3em 0;
   cursor: pointer;
-  font-family: inherit;
-  transition: background 0.1s;
+  transition: box-shadow 0.2s, transform 0.2s;
+  outline: none;
+  position: relative;
+  min-width: 200px;
 }
-button:hover {
-  background: #ffd580;
+
+button:hover,
+button:focus {
+  box-shadow: 0 0 40px #ffe066aa, 0 6px 32px #ffe06655;
+  transform: translateY(-2px) scale(1.04);
 }
+
 ul {
   list-style: none;
   padding: 0;
