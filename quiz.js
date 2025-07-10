@@ -120,16 +120,27 @@ let qIndex = 0;
 function renderIntro() {
   setQuizBackground(0);
   document.getElementById('app').innerHTML = `
-    <img src="images/antiworkers.jpg" alt="The Antiworkers" style="width:100%;max-width:420px;">
     <h1>Which Antiworker Are You?</h1>
-    <p>Welcome to The Jobiverse™, a dimension where capitalism has gone rogue and HR is a sentient fax machine. You’ve just woken up at your desk with no memory of how you got here, but you do have an employee badge with your name misspelled and a mysterious onboarding letter (in Comic Sans, font size 12) that reads: <br/>
-    <em>"Your destiny awaits. Navigate the corridors of corporate chaos to discover who you truly are. Beware: the coffee is decaf, and the printers are possessed.”</em></p>
-    <p>✨Ready to find out which exhausted, adorable Antiworker lives inside you?</p>
-    <button onclick="startQuiz()">Let's Get To Work!</button>
+    <p>Welcome to The Jobiverse™, a dimension where capitalism has gone rogue and HR is a sentient fax machine. ?</p>
+    <img src="images/antiworkers.jpg" alt="The Antiworkers" style="width:100%;max-width:420px;">
+    <button class="start-button" onclick="renderSecondIntro()">Let's Go!</button>
   `;
   answers = [];
   branch = null;
   qIndex = 0;
+}
+
+function renderSecondIntro() {
+  const container = document.querySelector('.quiz-container');
+  container.innerHTML = `
+        <div class="intro-content">
+            <h2>Where am I?</h2>
+            <p>You’ve just woken up at your desk with no memory of how you got here, but you do have an employee badge with your name misspelled and a mysterious onboarding letter (in Comic Sans, font size 12) that reads: <br/>
+            <img src="images/mysteriousletter.jpg" alt="The Antiworkers" style="width:100%;max-width:420px;">
+            <p>✨Ready to find out which exhausted, adorable Antiworker lives inside you?</p>
+            <button class="start-button" onclick="startQuiz()">Start Quiz</button>
+        </div>
+    `;
 }
 
 function startQuiz() {
