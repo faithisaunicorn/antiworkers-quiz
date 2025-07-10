@@ -117,19 +117,6 @@ let answers = [];
 let branch = null;
 let qIndex = 0;
 
-function renderIntro() {
-  setQuizBackground(0);
-  document.getElementById('app').innerHTML = `
-    <h1>Which Antiworker Are You?</h1>
-    <p>Welcome to The Jobiverse™, a dimension where capitalism has gone rogue and HR is a sentient fax machine. ?</p>
-    <img src="images/antiworkers.jpg" alt="The Antiworkers" style="width:100%;max-width:420px;">
-    <button class="start-button" onclick="renderSecondIntro()">Let's Go!</button>
-  `;
-  answers = [];
-  branch = null;
-  qIndex = 0;
-}
-
 function renderSecondIntro() {
   const container = document.querySelector('.quiz-container');
   container.innerHTML = `
@@ -141,6 +128,19 @@ function renderSecondIntro() {
             <button class="start-button" onclick="startQuiz()">Start Quiz</button>
         </div>
     `;
+}
+
+function renderIntro() {
+  setQuizBackground(0);
+  document.getElementById('app').innerHTML = `
+    <h1>Which Antiworker Are You?</h1>
+    <p>Welcome to The Jobiverse™, a dimension where capitalism has gone rogue and HR is a sentient fax machine. ?</p>
+    <img src="images/antiworkers.jpg" alt="The Antiworkers" style="width:100%;max-width:420px;">
+    <button class="start-button" onclick="renderSecondIntro()">Let's Go!</button>
+  `;
+  answers = [];
+  branch = null;
+  qIndex = 0;
 }
 
 function startQuiz() {
