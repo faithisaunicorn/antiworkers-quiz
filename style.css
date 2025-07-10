@@ -127,8 +127,22 @@ footer {
   margin: 2em 0;
   box-shadow: 0 2px 8px #e5c08933;
 }
-img.character {
-  width: 180px;
+.character {
   display: block;
-  margin: 1em auto;
+  margin: 0 auto 1.2em auto;
+  width: 100%;
+  max-width: 380px; /* You can adjust this for laptop/tablet */
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 2px 18px #0001;
+}
+@media (max-width: 900px) {
+  .character {
+    max-width: 320px;
+  }
+}
+@media (max-width: 600px) {
+  .character {
+    max-width: 95vw;
+  }
 }
