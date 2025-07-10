@@ -1,128 +1,102 @@
 body {
-  min-height: 100vh;
-  margin: 0;
-  background: linear-gradient(180deg, #563d7c 0%, #845ec2 100%);
   font-family: 'Quicksand', Arial, sans-serif;
-  overflow-x: hidden;
+  background: linear-gradient(180deg, #563d7c 0%, #845ec2 100%);
+  color: #372b26;
+  margin: 0;
+  padding: 0;
 }
-
-.container {
-  max-width: 420px;
-  min-height: 100vh;
-  margin: 0 auto;
-  padding: 2em 1em 1em 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  text-align: center;
-  z-index: 1;
-}
-
-.bg-decor {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  left: 0; top: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* Example star and moon SVGs for decor */
-.bg-stars {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0; top: 0;
-  pointer-events: none;
-  z-index: 0;
-}
-.bg-moon {
-  position: absolute;
-  top: 90px;
-  right: 80px;
-  width: 95px;
-  z-index: 1;
-  opacity: 0.95;
-}
-
-.title {
-  font-size: 2.7em;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 0 0 18px #fff6, 0 0 40px #fff2;
-  margin-bottom: 0.2em;
-  margin-top: 1em;
-  letter-spacing: 0.01em;
-}
-
-.subtitle {
-  font-size: 1.4em;
-  color: #f8f8fa;
-  margin-bottom: 0.5em;
-  font-weight: 500;
-}
-
-.desc {
-  font-size: 1.1em;
-  color: #efe9fd;
-  margin-bottom: 1.5em;
-  line-height: 1.6;
-}
-
-.mascot {
-  width: 160px;
-  margin-bottom: 2em;
-  z-index: 1;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.quiz-art {
-  width: 80%;
-  max-width: 340px;
+main {
+  max-width: 540px;
+  margin: 2em auto 4em auto;
+  background: #fffbe8;
   border-radius: 18px;
-  margin: 0.5em auto 2em auto;
-  display: block;
-  box-shadow: 0 4px 24px #0003;
+  box-shadow: 0 3px 15px #e8dac8;
+  padding: 2em;
 }
-
-.btn {
-  background: #ffe066;
-  color: #653d7c;
-  font-size: 1.4em;
-  font-weight: bold;
-  padding: 0.9em 2.3em;
+button {
+  background: #ffb347;
+  color: #372b26;
   border: none;
-  border-radius: 2em;
-  box-shadow: 0 4px 32px #ffe06644, 0 1.5px 0 #fff6 inset;
-  margin: 1.2em 0 0.3em 0;
+  border-radius: 6px;
+  font-size: 1.1em;
+  padding: 0.6em 2em;
+  margin: 0.5em 0;
   cursor: pointer;
-  transition: box-shadow 0.2s, transform 0.2s;
-  outline: none;
-  position: relative;
-  min-width: 200px;
+  font-family: inherit;
+  transition: background 0.1s;
 }
-
-.btn:hover, .btn:focus {
-  box-shadow: 0 0 40px #ffe066aa, 0 6px 32px #ffe06655;
-  transform: translateY(-2px) scale(1.04);
+button:hover {
+  background: #ffd580;
 }
-
-.footer {
-  font-size: 0.93em;
-  color: #f3e8ffb0;
-  margin-top: 2.5em;
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin-bottom: 1em;
+}
+.progress {
+  font-size: 0.9em;
+  color: #af6e4d;
+  margin-top: 1.5em;
+  text-align: right;
+}
+.progress-bar-container {
+  width: 100%;
+  background: #eee;
+  border-radius: 8px;
+  height: 10px;
+  margin: 24px 0 0 0;
+  overflow: hidden;
+}
+.progress-bar {
+  background: linear-gradient(90deg, #fcb900, #ec4899);
+  height: 100%;
+  transition: width 0.4s;
+}
+.cta-share {
+  margin: 1em 0;
+  background: #fffbe8;
+  padding: 1em;
+  border-radius: 10px;
+  border: 1px solid #fcb900;
+}
+.subscribe-form {
+  margin: 2em 0 1em 0;
+  padding: 1em;
+  background: #e0f7fa;
+  border-radius: 8px;
+  border: 1px solid #00bcd4;
+}
+.subscribe-form input[type="email"] {
+  padding: 6px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+}
+.subscribe-form button {
+  background: #ec4899;
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+footer {
   text-align: center;
-  letter-spacing: 0.01em;
-  z-index: 1;
+  margin: 2em 0 0 0;
+  color: #b68a4d;
+  font-size: 0.98em;
 }
-
-@media (max-width: 600px) {
-  .container { max-width: 98vw; }
-  .mascot { width: 120px; }
-  .quiz-art { width: 95%; }
-  .btn { font-size: 1.15em; padding: 0.8em 1.2em; min-width: 120px; }
+.end-page {
+  background: #fff0e1;
+  border-radius: 12px;
+  padding: 2em 1em;
+  margin: 2em 0;
+  box-shadow: 0 2px 8px #e5c08933;
+}
+img.character {
+  width: 180px;
+  display: block;
+  margin: 1em auto;
 }
