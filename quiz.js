@@ -120,10 +120,12 @@ let qIndex = 0;
 function renderIntro() {
   setQuizBackground(0);
   document.getElementById('app').innerHTML = `
-    <h1>Which Antiworker Are You?</h1>
-    <p>Welcome to The Jobiverse™, a dimension where capitalism has gone rogue and HR is a sentient fax machine. ?</p>
-    <img src="images/antiworkers.jpg" alt="The Antiworkers" style="width:100%;max-width:420px;">
-    <button class="start-button" onclick="renderSecondIntro()">Let's Go!</button>
+    <div class="container">
+      <h1>Which Antiworker Are You?</h1>
+      <p>Welcome to The Jobiverse™, a dimension where capitalism has gone rogue and HR is a sentient fax machine.</p>
+      <img src="images/antiworkers.png" alt="The Antiworkers" style="width:100%;max-width:420px;">
+      <button class="btn-glow" onclick="renderSecondIntro()">Let's Go!</button>
+    </div>
   `;
   answers = [];
   branch = null;
@@ -133,12 +135,12 @@ function renderIntro() {
 function renderSecondIntro() {
   const container = document.getElementById('app');
   container.innerHTML = `
-    <div class="intro-content">
+    <div class="container">
       <h2>Where am I?</h2>
-      <p>You’ve just woken up at your desk with no memory of how you got here...
-      <img src="images/mysteriousletter.jpg" alt="The Antiworkers" style="width:100%;max-width:420px;">
+      <p>You’ve just woken up at your desk with no memory of how you got here, but you do have an employee badge with your name misspelled and a mysterious onboarding letter (in Comic Sans, font size 12) that reads:</p>
+      <img src="images/mysteriousletter.png" alt="The Antiworkers" style="width:100%;max-width:420px;">
       <p>✨Ready to find out which exhausted, adorable Antiworker lives inside you?</p>
-      <button class="start-button" onclick="startQuiz()">Start Quiz</button>
+      <button class="btn-glow" onclick="startQuiz()">Start Quiz</button>
     </div>
   `;
 }
@@ -183,7 +185,7 @@ function renderQuestionUI(q, number, total) {
       <ul>
         ${q.options.map(opt => `
           <li>
-            <button type="button" onclick="submitAnswer('${opt.value}')">${opt.text}</button>
+            <button type="button" class="btn-fixed" onclick="submitAnswer('${opt.value}')">${opt.text}</button>
           </li>
         `).join("")}
       </ul>
@@ -202,7 +204,7 @@ function renderBranchQuestion() {
       <ul>
         ${bq.options.map(opt => `
           <li>
-            <button type="button" onclick="submitBranchAnswer('${opt.value}')">${opt.text}</button>
+            <button type="button" class="btn-fixed" onclick="submitBranchAnswer('${opt.value}')">${opt.text}</button>
           </li>
         `).join("")}
       </ul>
@@ -236,7 +238,7 @@ function renderEnd() {
         <br>
         The fax sparks, hums a victory jingle, and bursts into confetti made of recycled leave applications.
       </p>
-      <button onclick="renderResult()">VIEW MY RESULTS</button>
+      <button class="btn-glow" onclick="renderResult()">VIEW MY RESULTS</button>
     </div>
   `;
 }
@@ -248,8 +250,8 @@ function renderResult() {
   document.getElementById('app').innerHTML = `
     <h2>You are: ${result.character}</h2>
     <img class="character" src="${result.img}" alt="${result.character}">
-    <p>${result.description}</p>
-    <button id="download-img-btn">Save your results</button>
+    ${result.description ? `<p>${result.description}</p>` : ""}
+    <button id="download-img-btn" class="save-btn">Save your results</button>
     <div>
       <div class="cta-share">
         <p><strong>If you had fun taking this quiz, send it to your friends or colleagues </strong>– after all, the more spam, the merrier!</p> 
@@ -265,7 +267,7 @@ function renderResult() {
       <button type="submit">Subscribe</button>
     </form>
     <div style="margin-top:2em;">
-      <button onclick="renderIntro()">Restart / Retry Quiz</button>
+      <button type="button" class="btn-fixed" onclick="renderIntro()">Restart / Retry Quiz</button>
     </div>
   `;
   document.getElementById('download-img-btn').onclick = function() {
