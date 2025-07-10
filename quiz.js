@@ -117,19 +117,6 @@ let answers = [];
 let branch = null;
 let qIndex = 0;
 
-function renderSecondIntro() {
-  const container = document.querySelector('.quiz-container');
-  container.innerHTML = `
-        <div class="intro-content">
-            <h2>Where am I?</h2>
-            <p>You’ve just woken up at your desk with no memory of how you got here, but you do have an employee badge with your name misspelled and a mysterious onboarding letter (in Comic Sans, font size 12) that reads: <br/>
-            <img src="images/mysteriousletter.jpg" alt="The Antiworkers" style="width:100%;max-width:420px;">
-            <p>✨Ready to find out which exhausted, adorable Antiworker lives inside you?</p>
-            <button class="start-button" onclick="startQuiz()">Start Quiz</button>
-        </div>
-    `;
-}
-
 function renderIntro() {
   setQuizBackground(0);
   document.getElementById('app').innerHTML = `
@@ -141,6 +128,19 @@ function renderIntro() {
   answers = [];
   branch = null;
   qIndex = 0;
+}
+
+function renderSecondIntro() {
+  const container = document.getElementById('app');
+  container.innerHTML = `
+    <div class="intro-content">
+      <h2>Where am I?</h2>
+      <p>You’ve just woken up at your desk with no memory of how you got here...
+      <img src="images/mysteriousletter.jpg" alt="The Antiworkers" style="width:100%;max-width:420px;">
+      <p>✨Ready to find out which exhausted, adorable Antiworker lives inside you?</p>
+      <button class="start-button" onclick="startQuiz()">Start Quiz</button>
+    </div>
+  `;
 }
 
 function startQuiz() {
