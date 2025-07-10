@@ -238,7 +238,7 @@ function renderEnd() {
         <br>
         The fax sparks, hums a victory jingle, and bursts into confetti made of recycled leave applications.
       </p>
-      <button onclick="renderResult()">VIEW MY RESULTS</button>
+      <button class="btn-glow" onclick="renderResult()">VIEW MY RESULTS</button>
     </div>
   `;
 }
@@ -251,7 +251,7 @@ function renderResult() {
     <h2>You are: ${result.character}</h2>
     <img class="character" src="${result.img}" alt="${result.character}">
     <p>${result.description}</p>
-    <button id="download-img-btn">Save your results</button>
+    <button type="button" class="btn-fixed" button id="download-img-btn">Save your results</button>
     <div>
       <div class="cta-share">
         <p><strong>If you had fun taking this quiz, send it to your friends or colleagues </strong>– after all, the more spam, the merrier!</p> 
@@ -267,7 +267,7 @@ function renderResult() {
       <button type="submit">Subscribe</button>
     </form>
     <div style="margin-top:2em;">
-      <button onclick="renderIntro()">Restart / Retry Quiz</button>
+      <button type="button" class="btn-fixed" onclick="renderIntro()">Restart / Retry Quiz</button>
     </div>
   `;
   document.getElementById('download-img-btn').onclick = function() {
