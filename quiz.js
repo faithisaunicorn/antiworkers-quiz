@@ -124,8 +124,8 @@ function renderIntro() {
       <h1>Which Antiworker Are You?</h1>
       <p>Welcome to The Jobiverse™, a dimension where capitalism has gone rogue and HR is a sentient fax machine.</p>
       <img src="images/antiworkers.png" alt="The Antiworkers" style="width:100%;">
-      <p align ="center">
-        <button class="btn-glow" style="display: block;" onclick="renderSecondIntro()">Let's Go!</button>
+      <p style="text-align: center;">
+        <button class="btn-glow" onclick="renderSecondIntro()">Let's Go!</button>
       </p>
     </div>
   `;
