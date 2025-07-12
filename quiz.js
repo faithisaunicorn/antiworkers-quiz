@@ -252,7 +252,6 @@ function renderResult() {
   document.getElementById('app').innerHTML = `
     <h2>You are: ${result.character}</h2>
     <img class="character" src="${result.img}" alt="${result.character}">
-    ${result.description ? `<p>${result.description}</p>` : ""}
     <button id="download-img-btn" class="save-btn">Save your results</button>
     <div>
       <div class="cta-share">
