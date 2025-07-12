@@ -1,5 +1,5 @@
 body {
-  font-family: 'Quicksand', Arial, sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background: linear-gradient(180deg, #ffedf7 0%, #b3e5fc 100%);
   color: #000000;
   margin: 0;
@@ -12,6 +12,21 @@ main {
   border-radius: 18px;
   box-shadow: 0 3px 15px #e8dac8;
   padding: 2em;
+}
+
+/*to make font size consistent */
+#app, .container, .quiz-container {
+  font-size: 1.15rem;
+  font-family: 'Quicksand', sans-serif;
+  color: #222;
+}
+
+#app p, .container p {
+  font-size: 1.15rem;
+}
+
+.btn-fixed, .btn-glow, .save-btn, .start-button {
+  font-size: 1.15rem;
 }
 
 /* Glowing button for intro and second intro screens */
