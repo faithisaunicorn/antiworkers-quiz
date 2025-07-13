@@ -1,9 +1,9 @@
 const QUIZ_PAGE_BACKGROUNDS = [
-  "#e6e1fc", "#fff4c6", "#cee1ff", "#e4ffc5", "#bbdefb", "#fef0d4", "#e0f7fa", "#ffe9c6", "#c8e6c9", "#b3e5fc", "#ffedf7"
+    "#e6e1fc", "#fff4c6", "#b9e6fc", "#e4ffc5", "#bbdefb", "#fef0d4", "#e0f7fa", "#ffe9c6", "#c8e6c9", "#b3e5fc", "#ffedf7"
 ];
 
 function setQuizBackground(index) {
-  document.body.style.background = QUIZ_PAGE_BACKGROUNDS[index] || "#e6e1fc";
+  document.body.style.background = `linear-gradient(180deg, ${QUIZ_PAGE_BACKGROUNDS[index]} 0%, #YOUR_COLOR2 100%)` || "linear-gradient(180deg, #e6e1fc 0%, #b9e6fc 100%)";
 }
 
 const QUESTIONS = [
@@ -246,9 +246,6 @@ function renderEnd() {
     <div class="end-page">
       <p>
         The HR Fax Machine begins to whir with divine purpose.<br>
-        It ejects a single page with your name (still misspelled), a star-shaped sticker, and the message:<br>
-        <strong>“CONGRATULATIONS. You have completed your journey through The Jobiverse™. Please proceed to the Results Page to discover your true Antiworker identity. And remember: your PTO balance is imaginary.”</strong>
-        <br>
         The fax sparks, hums a victory jingle, and bursts into confetti made of recycled leave applications.
       </p>
       <button class="btn-glow" onclick="renderResult()">VIEW MY RESULTS</button>
