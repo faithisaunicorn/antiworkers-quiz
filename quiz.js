@@ -269,7 +269,7 @@ function renderResult() {
         <p><strong>If you had fun taking this quiz, send it to your friends or colleagues </strong>– after all, the more spam, the merrier!</p>
         <p>
           Where burnout and nihilism meet cuteness. Scroll your stress away, follow  
-          <a href="https://www.instagram.com/theantiworkers/" target="_blank">@theantiworkers</a> on IG/FB for weekly anti-work cartoons.
+          <a href="https://www.instagram.com/theantiworkers/" target="_blank">@theantiworkers</a> on IG/FB for weekly anti-work & self-care cartoons.
         </p>
       </div>
     </div>

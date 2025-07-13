@@ -27,6 +27,15 @@ main {
   color: #222;
 }
 
+#app {
+  margin-bottom: 0.2em;
+  padding-bottom: 0.2em;
+}
+.quiz-container {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.2em;
+}
+
 #app h1, #app h2, #app h3,
 .container h1, .container h2, .container h3 {
   font-size: 1.15rem; /* same as base */
@@ -73,20 +82,22 @@ main {
 }
 
 .result-action-btn {
+  font-size: 1rem !important; /* Increased size for button text */
   padding: 0.8em 1.7em;
   border: none;
   border-radius: 2em;
-  box-shadow: none;
-  margin-bottom: 0.25em;
-  cursor: pointer;
-  transition: background 0.15s;
-  outline: none;
+  background: #ffe066;
+  color: #222;
+  font-weight: normal;
   min-width: 160px;
   max-width: 250px;
   display: block;
   width: 100%;
   text-align: center;
-  background: #ffe066;
+  cursor: pointer;
+  transition: background 0.15s;
+  outline: none;
+  margin-bottom: 0;
 }
 
 .btn-fixed:focus,
@@ -273,16 +284,25 @@ li {
 
 /* Results page smaller font */
 .results-page {
-  font-size: 1.2rem;
+  font-size: 1rem;
+}
+
+/* flex container for result buttons */
+.result-actions {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 1em;
+  margin-bottom: 0.2em;
 }
 
 /* Footer style */
 footer {
-  font-size: 0.9rem;        /* or your preferred size */
+  font-size: 0.95rem;        /* or your preferred size */
   color: #224170;         /* a purple-ish shade, adjust as you wish */
   text-align: center;
   padding: 0.7em 0 1.1em 0;
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 
 footer a {
@@ -323,12 +343,5 @@ footer a:hover {
   .result-action-btn, .btn-fixed { min-width: 0; max-width: 100%; }
 }
 
-/* flex container for result buttons */
-.result-actions {
-  display: flex;
-  gap: 1em;
-  justify-content: center;
-  margin-top: 2em;
-  margin-bottom: 0.5em;
-}
+
 
