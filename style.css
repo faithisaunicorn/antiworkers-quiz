@@ -86,7 +86,7 @@ main {
   padding: 0.8em 1.7em;
   border: none;
   border-radius: 2em;
-  background: #ffe066;
+  background: #b9e6fc;
   color: #222;
   font-weight: normal;
   min-width: 160px;
@@ -108,23 +108,27 @@ main {
 }
 
 .btn-glow {
-  background: #ffe066;
-  color: #222;
+  background: #d9f3ff;
+  color: #653d7c;
+  font-size: 1.4em;
+  font-weight: bold;
+  padding: 0.9em 2.3em;
   border: none;
   border-radius: 2em;
-  box-shadow: none;
-  padding: 0.8em 1.7em;
-  font-weight: bold;
-  display: block;
-  margin: 0 auto;
+  box-shadow: 0 4px 32px #ffe06644, 0 1.5px 0 #fff6 inset;
+  margin: 1.2em auto 0.3em auto;  /* Changed margin to use auto for left/right */
   cursor: pointer;
-  min-width: 160px;
-  max-width: 250px;
-  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+  outline: none;
+  position: relative;
+  min-width: 200px;
+  display: block;          /* Add this if not already present */
+  margin-left: auto;       /* Add this */
+  margin-right: auto;      /* Add this */
 }
 
 .save-btn {
-  background: #ffe066;
+  background: #b9e6fc;
   color: #222;
   font-size: 1.15rem;
   font-weight: bold;
@@ -142,7 +146,7 @@ main {
 
 /* Glowing button for intro and second intro screens */
 .btn-glow {
-  background: #ffe066;
+  background: #b9e6fc;
   color: #653d7c;
   font-size: 1.4em;
   font-weight: bold;
@@ -159,13 +163,13 @@ main {
 }
 .btn-glow:hover,
 .btn-glow:focus {
-  box-shadow: 0 0 40px #ffe066cc, 0 6px 10px #ffe06699;
+  box-shadow: 0 0 40px #b9e6fc, 0 6px 10px #ffe06699;
   transform: translateY(-2px) scale(1.04);
 }
 
 /* Fixed color button for quiz questions and the rest */
 .btn-fixed {
-  background: #ffe066;
+  background: #b9e6fc;
   color: #222;
   font-size: 1.15rem;
   font-family: 'Quicksand', sans-serif;
@@ -182,13 +186,13 @@ main {
 
 .btn-fixed:hover,
 .btn-fixed:focus {
-  background: #ffe066;
+  background: #b9e6fc;
   box-shadow: 0 3px 18px #f6d36544;
   color: #000;
 }
 
 .save-btn {
-  background: #ffe066;
+  background: #b9e6fc;
   color: #222;
   font-size: 1.1em;
   font-weight: bold;
@@ -205,7 +209,7 @@ main {
 }
 .save-btn:hover,
 .save-btn:focus {
-  background: #ffe066;
+  background: #b9e6fc;
   box-shadow: 0 3px 18px #f6d36544;
   color: #000;
 }
@@ -342,6 +346,3 @@ footer a:hover {
   .cover-image, .character { max-width: 95vw; }
   .result-action-btn, .btn-fixed { min-width: 0; max-width: 100%; }
 }
-
-
-

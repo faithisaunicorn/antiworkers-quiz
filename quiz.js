@@ -243,7 +243,7 @@ function submitBranchAnswer(val) {
 function renderEnd() {
   setQuizBackground(11)
   document.getElementById('app').innerHTML = `
-    <div class="end-page">
+    <div class="end-page" style="text-align: center;">
       <p>
         The HR Fax Machine begins to whir with divine purpose.<br>
         The fax sparks, hums a victory jingle, and bursts into confetti made of recycled leave applications.
