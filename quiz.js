@@ -1,5 +1,5 @@
 const QUIZ_PAGE_BACKGROUNDS = [
- "#e6e1fc", "#fff4c6", "#cee1ff", "#e4ffc5", "#bbdefb", "#fef0d4", "#e0f7fa", "#ffe9c6", "#c8e6c9", "#b3e5fc", "#ffedf7"
+  "#e6e1fc", "#fff4c6", "#cee1ff", "#e4ffc5", "#bbdefb", "#fef0d4", "#e0f7fa", "#ffe9c6", "#c8e6c9", "#b3e5fc", "#ffedf7"
 ];
 
 function setQuizBackground(index) {
@@ -40,7 +40,7 @@ const QUESTIONS = [
     ]
   },
   {
-    text: "In the break room, the microwave starts to tremble. With a low hum and the smell of burnt popcorn, it shifts aside to reveal a swirling portal pulsing with a purple glow. It’s….a gateway. But to where?",
+    text: "In the break room, the microwave starts to tremble. With a low hum and the smell of burnt popcorn, it shifts aside to reveal a swirling portal pulsing with a purple glow. It’s….a gateway to?",
     options: [
       { value: "A", text: "A sacred sourdough shrine." },
       { value: "B", text: "A wizened talking frog wearing a mysterious cape." },
@@ -51,7 +51,7 @@ const QUESTIONS = [
 
 const BRANCH_QUESTIONS = {
   A: {
-    text: "The scent of fermentation is oddly comforting. You find yourself in a warm, glowing bakery where loaves levitate and hum Gregorian chants in gluten. A sourdough starter bubbles in a crystal jar on an altar, glowing like radioactive kombucha.<br>What do you ask this sagely sourdough?",
+    text: "The scent of fermentation is oddly comforting. You find yourself in a warm, glowing bakery where loaves levitate and hum Gregorian chants in gluten. A sourdough starter bubbles in a crystal chalice. What do you ask the sourdough?",
     options: [
       { value: "A", text: "“Am I rising, or just fermenting?”" },
       { value: "B", text: "“Do you think I should quit?”" },
@@ -59,7 +59,7 @@ const BRANCH_QUESTIONS = {
     ]
   },
   B: {
-    text: "You land in a floating conference room made of lily pads. A single frog sits at the head of the table, donning a velvet cape and the aura of someone who’s read too much Nietzsche. He adjusts his glasses. Then croaks: “The self is a spreadsheet – blank until you fill it.”<br>How do you respond?",
+    text: "You land in a floating conference room made of lily pads. A single frog sits at the head of the table, donning a velvet cape and the aura of someone who’s read too much Nietzsche. He adjusts his monocle. What do you say?",
     options: [
       { value: "A", text: "“I knew therapy was just vibes.”" },
       { value: "B", text: "“Is this part of orientation?”" },
@@ -67,7 +67,7 @@ const BRANCH_QUESTIONS = {
     ]
   },
   C: {
-    text: "You emerge into a cave that smells stronger than a Starbucks. Espresso pours from waterfalls, and everything smells like ambition and late nights. The Coffee Oracle floats toward you, robes made of coffee-stained receipts. She hands you a lukewarm cup of coffee labelled “Decaf.”<br>What’s your next move?",
+    text: "You emerge into a cave that smells stronger than a Starbucks. Espresso pours from waterfalls, and everything smells like ambition and late nights. The Coffee Oracle floats toward you, robes made of recycled receipts. What do you do with the cup it offers?",
     options: [
       { value: "A", text: "Hurl it into the time void – lukewarm coffee should be illegal." },
       { value: "B", text: "Finish the whole cup in one big gulp because you’re thirsty." },
@@ -78,7 +78,7 @@ const BRANCH_QUESTIONS = {
 
 const REST_QUESTIONS = [
   {
-    text: "As you journey through the realm, the air thickens with meaning (or possibly toner fumes). Suddenly, a glowing scroll materializes in your hands. It's The Corporate Prophecy, edged in gold and inexplicably coffee-stained.<br><br>The parchment unfurls itself and declares: “You, valiant employee of questionable attendance, are the Chosen One, destined to bring balance to KPIs and inner peace to meetings that could’ve been emails.”<br><br>What’s your reaction?",
+    text: "As you journey through the realm, the air thickens with meaning (or possibly toner fumes). Suddenly, a glowing scroll materializes in your hands. It's The Corporate Prophecy, edged in gold and slightly passive-aggressive. What does it say?",
     options: [
       { value: "A", text: "“Again? I just want a nap.”" },
       { value: "B", text: "“Time to unionise the multiverse.”" },
@@ -86,7 +86,7 @@ const REST_QUESTIONS = [
     ]
   },
   {
-    text: "Your surroundings blur like a corrupted Zoom background. You jolt awake at your desk, head stuck to a post-it that says “circle back later.”<br><br>Your inbox is still overflowing. Your badge is still misspelled. But something feels…different. Empowered? Enlightened? Mildly caffeinated? The fluorescent lights above flicker in what might be applause.<br><br>Someone knocks on your cubicle and says, “Are you okay?”",
+    text: "Your surroundings blur like a corrupted Zoom background. You jolt awake at your desk, head stuck to a post-it that says “circle back later.”<br><br>Your inbox is still overflowing. Your manager appears and asks if you finished the onboarding. What do you say?",
     options: [
       { value: "A", text: "“Haha yeah I was just stretching! For 20 minutes. On the floor.”" },
       { value: "B", text: "“No, but continue.”" },
@@ -123,8 +123,8 @@ function renderIntro() {
     <div class="container">
       <h1>Which Antiworker Are You?</h1>
       <p>Welcome to The Jobiverse™, a dimension where capitalism has gone rogue and HR is a sentient fax machine.</p>
-      <img src="images/antiworkers.png" alt="The Antiworkers" style="width:100%;">
-      <p style="text-align: center;">
+      <img src="images/antiworkers.png" alt="The Antiworkers" class="cover-image">
+      <p align="center">
         <button class="btn-glow" onclick="renderSecondIntro()">Let's Go!</button>
       </p>
     </div>
@@ -136,13 +136,14 @@ function renderIntro() {
 
 function renderSecondIntro() {
   const container = document.getElementById('app');
+  setQuizBackground(0);
   container.innerHTML = `
     <div class="container">
       <h2>Where am I?</h2>
-      <p>You’ve just woken up at your desk with no memory of how you got here, but you do have an employee badge with your name misspelled and a mysterious onboarding letter (in Comic Sans, font size 12) that reads:</p>
-      <img src="images/mysteriousletter.png" alt="The Antiworkers" style="width:100%;max-width:420px;">
+      <p>You’ve just woken up at your desk with no memory of how you got here, but you do have an employee badge with your name misspelled and a mysterious onboarding letter (in Comic Sans, font size 64).</p>
+      <img src="images/mysteriousletter.png" alt="The Antiworkers" class="cover-image">
       <p>✨Ready to find out which exhausted, adorable Antiworker lives inside you?</p>
-      <button class="btn-glow" onclick="startQuiz()">Start Quiz</button>
+      <button class="btn-glow" style="display:block; margin: 0 auto;" onclick="startQuiz()">Start Quiz</button>
     </div>
   `;
 }
@@ -176,18 +177,23 @@ function renderQuestion() {
     setQuizBackground(10); // Q10
     renderQuestionUI(REST_QUESTIONS[3], 10, QUESTIONS.length + 5);
   } else if (qIndex === 10) {
-    renderEnd(); // End page (results), handled in renderEnd()
+    renderEnd();
   }
 }
 
 function renderQuestionUI(q, number, total) {
+  const bgColor = QUIZ_PAGE_BACKGROUNDS[qIndex + 1] || "#e6e1fc";
   document.getElementById('app').innerHTML = `
     <form id="quizForm">
       <h2>${q.text}</h2>
       <ul>
         ${q.options.map(opt => `
           <li>
-            <button type="button" class="btn-fixed" style="width:100%; text-align: left" onclick="submitAnswer('${opt.value}')">${opt.text}</button>
+            <button type="button"
+              class="btn-fixed"
+              style="background:${bgColor}; color:#222; border:none;"
+              onclick="submitAnswer('${opt.value}')"
+            >${opt.text}</button>
           </li>
         `).join("")}
       </ul>
@@ -200,13 +206,18 @@ function renderQuestionUI(q, number, total) {
 
 function renderBranchQuestion() {
   const bq = BRANCH_QUESTIONS[branch];
+  const bgColor = QUIZ_PAGE_BACKGROUNDS[6] || "#e6e1fc";
   document.getElementById('app').innerHTML = `
     <form id="quizForm">
       <h2>${bq.text}</h2>
       <ul>
         ${bq.options.map(opt => `
           <li>
-            <button type="button" class="btn-fixed" style="width:100%; text-align: left" onclick="submitBranchAnswer('${opt.value}')">${opt.text}</button>
+            <button type="button"
+              class="btn-fixed"
+              style="background:${bgColor}; color:#222; border:none;"
+              onclick="submitBranchAnswer('${opt.value}')"
+            >${opt.text}</button>
           </li>
         `).join("")}
       </ul>
@@ -236,7 +247,7 @@ function renderEnd() {
       <p>
         The HR Fax Machine begins to whir with divine purpose.<br>
         It ejects a single page with your name (still misspelled), a star-shaped sticker, and the message:<br>
-        <strong>“CONGRATULATIONS. You have completed your journey through The Jobiverse™. Please proceed to the Results Page to discover your true Antiworker identity. And remember: your PTO balance never resets.”</strong>
+        <strong>“CONGRATULATIONS. You have completed your journey through The Jobiverse™. Please proceed to the Results Page to discover your true Antiworker identity. And remember: your PTO balance is imaginary.”</strong>
         <br>
         The fax sparks, hums a victory jingle, and bursts into confetti made of recycled leave applications.
       </p>
@@ -255,9 +266,9 @@ function renderResult() {
     <button id="download-img-btn" class="save-btn">Save your results</button>
     <div>
       <div class="cta-share">
-        <p><strong>If you had fun taking this quiz, send it to your friends or colleagues </strong>– after all, the more spam, the merrier!</p> 
+        <p><strong>If you had fun taking this quiz, send it to your friends or colleagues </strong>– after all, the more spam, the merrier!</p>
         <p>
-          Where burnout and nihilism meets cuteness and self-care. Scroll your stress away, follow  
+          Where burnout and nihilism meet cuteness. Scroll your stress away, follow  
           <a href="https://www.instagram.com/theantiworkers/" target="_blank">@theantiworkers</a> on IG/FB for weekly anti-work cartoons.
         </p>
       </div>
@@ -269,6 +280,11 @@ function renderResult() {
     </form>
     <div style="margin-top:2em;">
       <button type="button" class="btn-fixed" onclick="renderIntro()">Restart / Retry Quiz</button>
+    </div>
+    <div style="text-align:center; margin-top:1.5em;">
+      <a href="https://theantiworkers.com/quiz-results/" target="_blank" class="see-all-results-link">
+        See all results
+      </a>
     </div>
   `;
   document.getElementById('download-img-btn').onclick = function() {
@@ -320,5 +336,4 @@ function findResult(mbti) {
   return results[0];
 }
 
-// Initial render
 renderIntro();
