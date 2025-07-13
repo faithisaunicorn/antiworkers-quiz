@@ -1,3 +1,8 @@
+/* Ensure Quicksand font for all buttons and inputs */
+button, input, select, textarea {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
   background: linear-gradient(180deg, #ffedf7 0%, #b3e5fc 100%);
@@ -5,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 main {
   max-width: 540px;
   margin: 2em auto 4em auto;
@@ -42,6 +48,7 @@ main {
   max-width: 540px;
 }
 
+/* Button styles */
 .btn-fixed, .btn-glow, .save-btn, .start-button {
   font-size: 1.15rem !important;
   font-family: 'Quicksand', sans-serif !important;
@@ -65,8 +72,27 @@ main {
   text-align: left;
 }
 
+.result-action-btn {
+  padding: 0.8em 1.7em;
+  border: none;
+  border-radius: 2em;
+  box-shadow: none;
+  margin-bottom: 0.25em;
+  cursor: pointer;
+  transition: background 0.15s;
+  outline: none;
+  min-width: 160px;
+  max-width: 250px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #ffe066;
+}
+
 .btn-fixed:focus,
-.btn-fixed:hover {
+.btn-fixed:hover,
+.result-action-btn:focus,
+.result-action-btn:hover {
   filter: brightness(0.97);
 }
 
@@ -216,18 +242,6 @@ li {
   transition: width 0.4s;
 }
 
-.see-all-results-link {
-  font-size: 1.1rem;
-  color: #653d7c;
-  text-decoration: underline;
-  font-weight: bold;
-  margin-top: 1em;
-  display: inline-block;
-}
-.see-all-results-link:hover {
-  color: #a17bdc;
-}
-
 .cta-share {
   margin: 1em 0;
   background: #fffbe8;
@@ -257,11 +271,18 @@ li {
   cursor: pointer;
 }
 
+/* Results page smaller font */
+.results-page {
+  font-size: 1.2rem;
+}
+
+/* Footer style */
 footer {
-  font-size: 0.8rem;        /* or your preferred size */
+  font-size: 0.9rem;        /* or your preferred size */
   color: #224170;         /* a purple-ish shade, adjust as you wish */
   text-align: center;
-  padding: 1em 0 1em 0;
+  padding: 0.7em 0 1.1em 0;
+  margin-top: 1em;
 }
 
 footer a {
@@ -299,11 +320,15 @@ footer a:hover {
 
 @media (max-width: 700px) {
   .cover-image, .character { max-width: 95vw; }
+  .result-action-btn, .btn-fixed { min-width: 0; max-width: 100%; }
 }
 
-@media (max-width: 900px) {
-  .character { max-width: 320px; }
+/* flex container for result buttons */
+.result-actions {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
 }
-@media (max-width: 600px) {
-  .character { max-width: 95vw; }
-}
+

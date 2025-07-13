@@ -278,13 +278,12 @@ function renderResult() {
       <input type="email" name="email" id="email" placeholder="your@email.com" required>
       <button type="submit">Subscribe</button>
     </form>
-    <div style="margin-top:2em;">
-      <button type="button" class="btn-fixed" onclick="renderIntro()">Restart / Retry Quiz</button>
-    </div>
-    <div style="text-align:center; margin-top:1.5em;">
-        <button class="btn-glow see-all-results-btn" onclick="window.open('https://theantiworkers.com/quiz-results/', '_blank')">
-        See all results
+    <div class="result-actions">
+        <button type="button" class="result-action-btn" onclick="renderIntro()">Restart / Retry Quiz</button>
+        <button class="result-action-btn" onclick="window.open('https://theantiworkers.com/quiz-results/', '_blank')">
+          See all results
         </button>
+      </div>
     </div>
   `;
   document.getElementById('download-img-btn').onclick = function() {
