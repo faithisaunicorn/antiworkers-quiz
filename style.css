@@ -31,6 +31,17 @@ main {
   font-size: 1.15rem;
 }
 
+#app img, .container img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 1em auto;
+}
+.cover-image, .character {
+  max-width: 540px;
+}
+
 .btn-fixed, .btn-glow, .save-btn, .start-button {
   font-size: 1.15rem !important;
   font-family: 'Quicksand', sans-serif !important;
@@ -245,12 +256,23 @@ li {
   border-radius: 5px;
   cursor: pointer;
 }
+
 footer {
+  font-size: 0.8rem;        /* or your preferred size */
+  color: #224170;         /* a purple-ish shade, adjust as you wish */
   text-align: center;
-  margin: 2em 0 0 0;
-  color: #b68a4d;
-  font-size: 0.98em;
+  padding: 1em 0 1em 0;
 }
+
+footer a {
+  color: #3f73c1;
+  text-decoration: underline;
+  font-weight: normal;
+}
+footer a:hover {
+  color: #95aed5;
+}
+
 .end-page {
   background: #fff0e1;
   border-radius: 12px;

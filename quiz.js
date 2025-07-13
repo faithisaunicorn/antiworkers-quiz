@@ -282,9 +282,9 @@ function renderResult() {
       <button type="button" class="btn-fixed" onclick="renderIntro()">Restart / Retry Quiz</button>
     </div>
     <div style="text-align:center; margin-top:1.5em;">
-      <a href="https://theantiworkers.com/quiz-results/" target="_blank" class="see-all-results-link">
+        <button class="btn-glow see-all-results-btn" onclick="window.open('https://theantiworkers.com/quiz-results/', '_blank')">
         See all results
-      </a>
+        </button>
     </div>
   `;
   document.getElementById('download-img-btn').onclick = function() {
