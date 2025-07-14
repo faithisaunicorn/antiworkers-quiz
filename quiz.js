@@ -271,7 +271,7 @@ function renderResult() {
       </div>
     </div>
     <form action="https://formspree.io/f/xrbkyrjd" method="POST" target="_blank" class="subscribe-form">
-      <label for="email">Subscribe for more of The Antiworker's antics (and future merch drops)! </label><br>
+      <label for="email">Subscribe for more of The Antiworker's antics and future merch drops (no spam, we promise)! </label><br>
       <input type="email" name="email" id="email" placeholder="your@email.com" required>
       <button type="submit">Subscribe</button>
     </form>

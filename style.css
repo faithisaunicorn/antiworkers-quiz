@@ -115,6 +115,7 @@ main {
   filter: brightness(0.97);
 }
 
+/* Glowing button for intro and second intro screens */
 .btn-glow {
   background: #ffd664;
   color: #653d7c;
@@ -133,47 +134,6 @@ main {
   display: block;          /* Add this if not already present */
 }
 
-.save-btn {
-  background: #f5d48d;
-  color: #222;
-  font-size: 1.15rem;
-  font-weight: bold;
-  padding: 0.6em 1.8em;
-  border: none;
-  border-radius: 2em;
-  box-shadow: 0 4px 32px #ffe06644, 0 1.5px 0 #fff6 inset;
-  margin: 1.2em auto 0 auto;
-  cursor: pointer;
-  display: block;
-  text-align: center;
-  min-width: 160px;
-  max-width: 250px;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-
-.save-btn:hover,
-.save-btn:focus {
-  box-shadow: 0 0 20px #ffd664, 0 6px 10px #ffffff;
-  transform: translateY(-2px) scale(1.04);
-}
-
-/* Glowing button for intro and second intro screens */
-.btn-glow {
-  background: #f5d48d;
-  color: #653d7c;
-  font-size: 1.4em;
-  font-weight: bold;
-  padding: 0.9em 2.3em;
-  border: none;
-  border-radius: 2em;
-  box-shadow: 0 4px 32px #ffe06644, 0 1.5px 0 #fff6 inset;
-  margin: 1.2em 0 0.3em 0;
-  cursor: pointer;
-  transition: box-shadow 0.2s, transform 0.2s;
-  outline: none;
-  position: relative;
-  min-width: 200px;
-}
 .btn-glow:hover,
 .btn-glow:focus {
   box-shadow: 0 0 20px #ffd664, 0 6px 10px #ffffff;
@@ -212,19 +172,20 @@ main {
   padding: 0.5em 1.6em;
   border: none;
   border-radius: 2em;
-  box-shadow: 0 2px 10px #f6d36533;
+  box-shadow: 0 4px 32px #ffe06644, 0 1.5px 0 #fff6 inset;
   margin: 1.2em auto 0 auto;
   cursor: pointer;
   display: block;
   text-align: center;
   min-width: 160px;
   max-width: 250px;
+  transition: box-shadow 0.2s, transform 0.2s;
 }
+
 .save-btn:hover,
 .save-btn:focus {
-  background: #f5d48d;
-  box-shadow: 0 3px 18px #f6d36544;
-  color: #000;
+  box-shadow: 0 4px 32px #ffe06644, 0 1.5px 0 #fff6 inset;
+  transform: translateY(-2px) scale(1.04);
 }
 
 /* Reduce space around each option */
@@ -296,6 +257,7 @@ li {
   border: none;
   padding: 7px 14px;
   border-radius: 5px;
+  margin-top: 1em;
   cursor: pointer;
 }
 
@@ -332,7 +294,7 @@ footer a:hover {
 }
 
 .end-page {
-  background: #fff0e1;
+  background: #d9f3ff;
   border-radius: 12px;
   padding: 2em 1em;
   margin: 2em 0;
