@@ -3,9 +3,10 @@ button, input, select, textarea {
   font-family: 'Quicksand', sans-serif !important;
 }
 
+/*background colour*/
 body {
   font-family: 'Quicksand', sans-serif;
-  background: linear-gradient(180deg, #ffedf7 0%, #b3e5fc 100%);
+  background: #b3e5fc;
   color: #000000;
   margin: 0;
   padding: 0;
@@ -16,8 +17,8 @@ main {
   margin: 2em auto 4em auto;
   background: #fffbe8;
   border-radius: 18px;
-  box-shadow: 0 3px 15px #e8dac8;
-  padding: 2em;
+  box-shadow: 0 3px 15px #00b2ca;
+  padding: 1.5em;
 }
 
 /*to make font size consistent */
@@ -86,7 +87,7 @@ main {
   padding: 0.8em 1.7em;
   border: none;
   border-radius: 2em;
-  background: #b9e6fc;
+  background: #f5d48d;
   color: #222;
   font-weight: normal;
   min-width: 160px;
@@ -95,9 +96,16 @@ main {
   width: 100%;
   text-align: center;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: box-shadow 0.2s, transform 0.2s;
   outline: none;
   margin-bottom: 0;
+  box-shadow: 0 4px 32px #ffe06644, 0 1.5px 0 #fff6 inset;
+}
+
+.result-action-btn:hover,
+.result-action-btn:focus {
+  box-shadow: 0 0 20px #ffd664, 0 6px 10px #ffffff;
+  transform: translateY(-2px) scale(1.04);
 }
 
 .btn-fixed:focus,
@@ -108,7 +116,7 @@ main {
 }
 
 .btn-glow {
-  background: #d9f3ff;
+  background: #ffd664;
   color: #653d7c;
   font-size: 1.4em;
   font-weight: bold;
@@ -123,30 +131,35 @@ main {
   position: relative;
   min-width: 200px;
   display: block;          /* Add this if not already present */
-  margin-left: auto;       /* Add this */
-  margin-right: auto;      /* Add this */
 }
 
 .save-btn {
-  background: #b9e6fc;
+  background: #f5d48d;
   color: #222;
   font-size: 1.15rem;
   font-weight: bold;
   padding: 0.6em 1.8em;
   border: none;
   border-radius: 2em;
-  box-shadow: none;
+  box-shadow: 0 4px 32px #ffe06644, 0 1.5px 0 #fff6 inset;
   margin: 1.2em auto 0 auto;
   cursor: pointer;
   display: block;
   text-align: center;
   min-width: 160px;
   max-width: 250px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.save-btn:hover,
+.save-btn:focus {
+  box-shadow: 0 0 20px #ffd664, 0 6px 10px #ffffff;
+  transform: translateY(-2px) scale(1.04);
 }
 
 /* Glowing button for intro and second intro screens */
 .btn-glow {
-  background: #b9e6fc;
+  background: #f5d48d;
   color: #653d7c;
   font-size: 1.4em;
   font-weight: bold;
@@ -163,13 +176,13 @@ main {
 }
 .btn-glow:hover,
 .btn-glow:focus {
-  box-shadow: 0 0 40px #b9e6fc, 0 6px 10px #ffe06699;
+  box-shadow: 0 0 20px #ffd664, 0 6px 10px #ffffff;
   transform: translateY(-2px) scale(1.04);
 }
 
 /* Fixed color button for quiz questions and the rest */
 .btn-fixed {
-  background: #b9e6fc;
+  background: #f5d48d;
   color: #222;
   font-size: 1.15rem;
   font-family: 'Quicksand', sans-serif;
@@ -186,13 +199,13 @@ main {
 
 .btn-fixed:hover,
 .btn-fixed:focus {
-  background: #b9e6fc;
+  background: #f5d48d;
   box-shadow: 0 3px 18px #f6d36544;
   color: #000;
 }
 
 .save-btn {
-  background: #b9e6fc;
+  background: #f5d48d;
   color: #222;
   font-size: 1.1em;
   font-weight: bold;
@@ -209,7 +222,7 @@ main {
 }
 .save-btn:hover,
 .save-btn:focus {
-  background: #b9e6fc;
+  background: #f5d48d;
   box-shadow: 0 3px 18px #f6d36544;
   color: #000;
 }
@@ -262,14 +275,14 @@ li {
   background: #fffbe8;
   padding: 1em;
   border-radius: 10px;
-  border: 1px solid #fcb900;
+  border: 2px solid #fcb900;
 }
 .subscribe-form {
-  margin: 2em 0 1em 0;
+  margin: 1em 0 1em 0;
   padding: 1em;
   background: #e0f7fa;
-  border-radius: 8px;
-  border: 1px solid #00bcd4;
+  border-radius: 10px;
+  border: 2px solid #00bcd4;
 }
 .subscribe-form input[type="email"] {
   padding: 6px 10px;
@@ -315,7 +328,7 @@ footer a {
   font-weight: normal;
 }
 footer a:hover {
-  color: #95aed5;
+  color: #fe7cbd;
 }
 
 .end-page {
