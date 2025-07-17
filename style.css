@@ -1,7 +1,47 @@
-/* Ensure Quicksand font for all buttons and inputs */
-button, input, select, textarea {
-  font-family: 'Quicksand', sans-serif !important;
+/*START OF 'UNDER CONSTRUCTION CODE, delete before launch*/
+<style>
+ #construction-overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: white;
+   z-index: 9999;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   pointer-events: auto;
 }
+
+.construction-content {
+  padding: 2rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.construction-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.construction-content p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+/* Hide main content when under construction */
+body.under-construction #app {
+  display: none;
+}
+</style>
+
+/*END OF 'UNDER CONSTRUCTION CODE, delete before launch*/
+
+    /* Ensure Quicksand font for all buttons and inputs */
+  button, input, select, textarea {
+    font-family: 'Quicksand', sans-serif !important;
+  }
 
 /*background colour*/
 body {
