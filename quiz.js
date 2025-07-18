@@ -102,11 +102,11 @@ const REST_QUESTIONS = [
     ]
   },
   {
-    text: "The HR Fax Machine starts glowing. It’s calling you to the fourth floor – a floor that doesn’t exist. What now?",
+    text: "You receive a mysterious calendar invite from HR to the 13th floor (but everyone knows there is no 13th floor...). What do you do?",
     options: [
-      { value: "A", text: "Put on your good hoodie. It’s time." },
-      { value: "B", text: "Email yourself a resignation letter “just in case.”" },
-      { value: "C", text: "Jump in. You’ve been training for this since your first group project." }
+      { value: "A", text: "Accept the invite. What’s the worst that could happen?" },
+      { value: "B", text: "Anxiously prepare a resignation letter (just in case they fire you)." },
+      { value: "C", text: "You jump up excitedly from your seat – you’ve been waiting for this day." }
     ]
   }
 ];
@@ -140,7 +140,7 @@ function renderSecondIntro() {
   container.innerHTML = `
     <div class="container">
       <h2>Where am I?</h2>
-      <p>You’ve just woken up at your desk with no memory of how you got here, but you do have an employee badge with your name misspelled and a mysterious onboarding letter (in Comic Sans, font size 64).</p>
+      <p>You’ve just woken up at your desk with no memory of how you got here, but you do have an employee badge with your name misspelled and a mysterious onboarding letter.</p>
       <img src="images/mysteriousletter.png" alt="The Antiworkers" class="cover-image">
       <p>✨Ready to find out which exhausted, adorable Antiworker lives inside you?</p>
       <button class="btn-glow" style="display:block; margin: 0 auto;" onclick="startQuiz()">Start Quiz</button>
