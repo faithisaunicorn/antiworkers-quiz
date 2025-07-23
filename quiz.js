@@ -78,7 +78,7 @@ const BRANCH_QUESTIONS = {
 
 const REST_QUESTIONS = [
   {
-    text: "As you journey through the realm, the air thickens with meaning (or possibly toner fumes). Suddenly, a glowing scroll materializes in your hands. It's The Corporate Prophecy, edged in gold and slightly passive-aggressive. What does it say?",
+    text: "As you journey through the realm, the air thickens with meaning (or possibly toner fumes). Suddenly, a glowing scroll materialises in your hands. It's The Corporate Prophecy, edged in gold and inexplicably coffee-stained.",
     options: [
       { value: "A", text: "“Again? I just want a nap.”" },
       { value: "B", text: "“Time to unionise the multiverse.”" },
@@ -86,7 +86,7 @@ const REST_QUESTIONS = [
     ]
   },
   {
-    text: "Your surroundings blur like a corrupted Zoom background. You jolt awake at your desk, head stuck to a post-it that says “circle back later.”<br><br>Your inbox is still overflowing. Your manager appears and asks if you finished the onboarding. What do you say?",
+    text: "Your surroundings blur like a corrupted Zoom background. You jolt awake at your desk, head stuck to a post-it that says “circle back later”. Your inbox is still overflowing. Your manager appears and asks if you finished the onboarding. What do you say?",
     options: [
       { value: "A", text: "“Haha yeah I was just stretching! For 20 minutes. On the floor.”" },
       { value: "B", text: "“No, but continue.”" },
@@ -94,7 +94,7 @@ const REST_QUESTIONS = [
     ]
   },
   {
-    text: "You’ve been promoted...perhaps The Corporate Prophecy had something to do with it. Your new title is “Chief Vibes Officer.” With great power comes great responsibility, so what now?",
+    text: "You’ve been promoted...perhaps The Corporate Prophecy had something to do with it. Your new title is “Chief Vibes Officer”. With great power comes great responsibility, so what now?",
     options: [
       { value: "A", text: "Rearrange the furniture and declare it feng shui." },
       { value: "B", text: "Host a team nap. HR says nothing." },
