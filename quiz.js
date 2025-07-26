@@ -16,7 +16,7 @@ const QUESTIONS = [
     ]
   },
   {
-    text: "You’re put in charge of a meeting titled “Optimising the Optimisation Strategy.” How do you survive?",
+    text: "You’re put in charge of a meeting titled 'Optimising the Optimisation Strategy'. How do you survive?",
     options: [
       { value: "A", text: "Make 12 slides that say the same thing in different fonts." },
       { value: "B", text: "Bribe attendees with snacks and end early." },
@@ -34,13 +34,13 @@ const QUESTIONS = [
   {
     text: "You’re tired from staring at spreadsheets all day. A coworker invites you to “coffee and vibes” in the break room. What do you bring?",
     options: [
-      { value: "A", text: "Your trauma journal, annotated." },
-      { value: "B", text: "A homemade juice labeled “Productivity Potion.”" },
+      { value: "A", text: "Your overly-annotated trauma journal." },
+      { value: "B", text: "A homemade juice labelled “Productivity Potion.”" },
       { value: "C", text: "Nothing. You *are* the vibe." }
     ]
   },
   {
-    text: "In the break room, the microwave starts to tremble. With a low hum and the smell of burnt popcorn, it shifts aside to reveal a swirling portal pulsing with a purple glow. It’s….a gateway to?",
+    text: "In the break room, the microwave starts to tremble. With a low hum and the smell of burnt popcorn, it shifts aside to reveal a swirling portal pulsing with a purple glow. Where does this gateway lead to?",
     options: [
       { value: "A", text: "A sacred sourdough shrine." },
       { value: "B", text: "A wizened talking frog wearing a mysterious cape." },
@@ -51,7 +51,7 @@ const QUESTIONS = [
 
 const BRANCH_QUESTIONS = {
   A: {
-    text: "The scent of fermentation is oddly comforting. You find yourself in a warm, glowing bakery where loaves levitate and hum Gregorian chants in gluten. A sourdough starter bubbles in a crystal chalice. What do you ask the sourdough?",
+    text: "The scent of fermentation is oddly comforting. You find yourself in a warm, glowing bakery where loaves levitate and hum Gregorian chants in gluten. A sourdough starter bubbles in a crystal jar on an altar, glowing like radioactive kombucha. What do you ask this sagely sourdough?",
     options: [
       { value: "A", text: "“Am I rising, or just fermenting?”" },
       { value: "B", text: "“Do you think I should quit?”" },
@@ -59,7 +59,7 @@ const BRANCH_QUESTIONS = {
     ]
   },
   B: {
-    text: "You land in a floating conference room made of lily pads. A single frog sits at the head of the table, donning a velvet cape and the aura of someone who’s read too much Nietzsche. He adjusts his monocle. What do you say?",
+    text: "You land in a floating conference room made of lily pads. A single frog sits at the head of the table, donning a velvet cape and the aura of someone who’s read too much Nietzsche. He adjusts his glasses, then croaks: “The self is a spreadsheet – blank until you fill it.” What do you say?",
     options: [
       { value: "A", text: "“I knew therapy was just vibes.”" },
       { value: "B", text: "“Is this part of orientation?”" },
@@ -67,9 +67,9 @@ const BRANCH_QUESTIONS = {
     ]
   },
   C: {
-    text: "You emerge into a cave that smells stronger than a Starbucks. Espresso pours from waterfalls, and everything smells like ambition and late nights. The Coffee Oracle floats toward you, robes made of recycled receipts. What do you do with the cup it offers?",
+    text: "You emerge into a cave that smells stronger than a Starbucks. Espresso pours from waterfalls, and everything smells like ambition and late nights. The Coffee Oracle floats toward you, robes made of recycled coffee-stained receipts. She hands you a lukewarm cup of decaf coffee. What's your next move?",
     options: [
-      { value: "A", text: "Hurl it into the time void – lukewarm coffee should be illegal." },
+      { value: "A", text: "Hurl it into the void – lukewarm coffee should be illegal." },
       { value: "B", text: "Finish the whole cup in one big gulp because you’re thirsty." },
       { value: "C", text: "Ask if it’s deductible as a business expense." }
     ]
@@ -78,7 +78,7 @@ const BRANCH_QUESTIONS = {
 
 const REST_QUESTIONS = [
   {
-    text: "As you journey through the realm, the air thickens with meaning (or possibly toner fumes). Suddenly, a glowing scroll materialises in your hands. It's The Corporate Prophecy, edged in gold and inexplicably coffee-stained.",
+    text: "As you journey through the realm, the air thickens with meaning (or possibly toner fumes). Suddenly, a glowing scroll materialises in your hands. It's The Corporate Prophecy. What’s your reaction?",
     options: [
       { value: "A", text: "“Again? I just want a nap.”" },
       { value: "B", text: "“Time to unionise the multiverse.”" },
@@ -86,15 +86,15 @@ const REST_QUESTIONS = [
     ]
   },
   {
-    text: "Your surroundings blur like a corrupted Zoom background. You jolt awake at your desk, head stuck to a post-it that says “circle back later”. Your inbox is still overflowing. Your manager appears and asks if you finished the onboarding. What do you say?",
+    text: "Your surroundings blur like a corrupted Zoom background. You jolt awake at your desk, head stuck to a post-it that says “circle back later”. Your inbox is still overflowing. Your work bestie knocks on your cubicle and asks, “Are you okay?”",
     options: [
       { value: "A", text: "“Haha yeah I was just stretching! For 20 minutes. On the floor.”" },
       { value: "B", text: "“No, but continue.”" },
-      { value: "C", text: "Panic. Say “You too!” and disappear into the stairwell." }
+      { value: "C", text: "Panic. Say “Have a nice day!” and disappear into the stairwell." }
     ]
   },
   {
-    text: "You’ve been promoted...perhaps The Corporate Prophecy had something to do with it. Your new title is “Chief Vibes Officer”. With great power comes great responsibility, so what now?",
+    text: "You’ve been promoted...perhaps The Corporate Prophecy had something to do with it. Your new title is 'Chief Vibes Officer'. With great power comes great responsibility, so what now?",
     options: [
       { value: "A", text: "Rearrange the furniture and declare it feng shui." },
       { value: "B", text: "Host a team nap. HR says nothing." },
