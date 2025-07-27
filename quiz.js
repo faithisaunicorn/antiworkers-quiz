@@ -214,12 +214,32 @@ function renderTransitionPage() {
   `;
 }
 
+function loadProgressiveImage(src, imgElement) {
+  const img = new Image();
+  
+  img.onload = function() {
+    imgElement.src = src;
+    imgElement.classList.add('loaded');
+  };
+  
+  img.src = src;
+}
+
 function renderQuestionUI(q, number, total) {
   const bgColor = QUIZ_PAGE_BACKGROUNDS[qIndex + 1] || "#e6e1fc";
   document.getElementById('app').innerHTML = `
     <form id="quizForm">
       <h2>${q.text}</h2>
-      ${q.image ? `<img src="${q.image}" alt="Question illustration" class="question-image">` : ''}
+      ${q.image ? `
+        <div class="image-container">
+          <img 
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" 
+            data-src="${q.image}" 
+            alt="Question illustration" 
+            class="question-image"
+          >
+        </div>
+      ` : ''}
       <ul>
         ${q.options.map(opt => `
           <li>
@@ -236,6 +256,11 @@ function renderQuestionUI(q, number, total) {
       </div>
     </form>
   `;
+
+  if (q.image) {
+    const imgElement = document.querySelector('.question-image');
+    loadProgressiveImage(q.image, imgElement);
+  }
 }
 
 function renderBranchQuestion() {
@@ -263,8 +288,17 @@ function renderBranchQuestion() {
   `;
 }
 
+function preloadNextImage(currentIndex) {
+  const nextQuestion = QUESTIONS[currentIndex + 1];
+  if (nextQuestion?.image) {
+    const img = new Image();
+    img.src = nextQuestion.image;
+  }
+}
+
 function submitAnswer(val) {
   answers.push(val);
+  preloadNextImage(qIndex);
   qIndex++;
   renderQuestion();
 }
