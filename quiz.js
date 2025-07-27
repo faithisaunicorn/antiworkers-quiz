@@ -9,6 +9,7 @@ function setQuizBackground(index) {
 const QUESTIONS = [
   {
     text: "You open your inbox. There are 972 unread emails. What do you do?",
+    image: "images/unreademails.webp",
     options: [
       { value: "A", text: "Mark all as read. If it’s important, they’ll call." },
       { value: "B", text: "Start colour-coding by urgency, sender, and emotional damage." },
@@ -17,6 +18,7 @@ const QUESTIONS = [
   },
   {
     text: "You’re put in charge of a meeting titled 'Optimising the Optimisation Strategy'. How do you survive?",
+    image: "images/meeting.webp",
     options: [
       { value: "A", text: "Make 12 slides that say the same thing in different fonts." },
       { value: "B", text: "Bribe attendees with snacks and end early." },
@@ -25,6 +27,7 @@ const QUESTIONS = [
   },
   {
     text: "An intern gives you a spreadsheet titled “Emotions_Quarterly_FINALv7.xlsx.” How do you respond?",
+    image: "images/excel.webp",
     options: [
       { value: "A", text: "Cry a little. Rename it “Feelings_2025_FINAL_FINAL2”." },
       { value: "B", text: "Add a pie chart titled “Regret”." },
@@ -33,6 +36,7 @@ const QUESTIONS = [
   },
   {
     text: "You’re tired from staring at spreadsheets all day. A coworker invites you to “coffee and vibes” in the break room. What do you bring?",
+    image: "images/breakroom.webp",
     options: [
       { value: "A", text: "Your overly-annotated trauma journal." },
       { value: "B", text: "A homemade juice labelled “Productivity Potion.”" },
@@ -41,6 +45,7 @@ const QUESTIONS = [
   },
   {
     text: "In the break room, the microwave starts to tremble. With a low hum and the smell of burnt popcorn, it shifts aside to reveal a swirling portal pulsing with a purple glow. Where does this gateway lead to?",
+    image: "images/microwave.webp",
     options: [
       { value: "A", text: "A sacred sourdough shrine." },
       { value: "B", text: "A wizened talking frog wearing a mysterious cape." },
@@ -52,6 +57,7 @@ const QUESTIONS = [
 const BRANCH_QUESTIONS = {
   A: {
     text: "The scent of fermentation is oddly comforting. You find yourself in a warm, glowing bakery where loaves levitate and hum Gregorian chants in gluten. A sourdough starter bubbles in a crystal jar on an altar, glowing like radioactive kombucha. What do you ask this sagely sourdough?",
+    image: "images/sourdough.webp",
     options: [
       { value: "A", text: "“Am I rising, or just fermenting?”" },
       { value: "B", text: "“Do you think I should quit?”" },
@@ -60,6 +66,7 @@ const BRANCH_QUESTIONS = {
   },
   B: {
     text: "You land in a floating conference room made of lily pads. A single frog sits at the head of the table, donning a velvet cape and the aura of someone who’s read too much Nietzsche. He adjusts his glasses, then croaks: “The self is a spreadsheet – blank until you fill it.” What do you say?",
+    image: "images/frog.webp",
     options: [
       { value: "A", text: "“I knew therapy was just vibes.”" },
       { value: "B", text: "“Is this part of orientation?”" },
@@ -68,6 +75,7 @@ const BRANCH_QUESTIONS = {
   },
   C: {
     text: "You emerge into a cave that smells stronger than a Starbucks. Espresso pours from waterfalls, and everything smells like ambition and late nights. The Coffee Oracle floats toward you, robes made of recycled coffee-stained receipts. She hands you a lukewarm cup of decaf coffee. What's your next move?",
+    image: "images/coffee.webp",
     options: [
       { value: "A", text: "Hurl it into the void – lukewarm coffee should be illegal." },
       { value: "B", text: "Finish the whole cup in one big gulp because you’re thirsty." },
@@ -79,6 +87,7 @@ const BRANCH_QUESTIONS = {
 const REST_QUESTIONS = [
   {
     text: "As you journey through the realm, the air thickens with meaning (or possibly toner fumes). Suddenly, a glowing scroll materialises in your hands. It's The Corporate Prophecy. What’s your reaction?",
+    image: "images/prophecy.webp",
     options: [
       { value: "A", text: "“Again? I just want a nap.”" },
       { value: "B", text: "“Time to unionise the multiverse.”" },
@@ -87,6 +96,7 @@ const REST_QUESTIONS = [
   },
   {
     text: "Your surroundings blur like a corrupted Zoom background. You jolt awake at your desk, head stuck to a post-it that says “circle back later”. Your inbox is still overflowing. Your work bestie knocks on your cubicle and asks, “Are you okay?”",
+    image: "images/circleback.webp",
     options: [
       { value: "A", text: "“Haha yeah I was just stretching! For 20 minutes. On the floor.”" },
       { value: "B", text: "“No, but continue.”" },
@@ -95,6 +105,7 @@ const REST_QUESTIONS = [
   },
   {
     text: "You’ve been promoted...perhaps The Corporate Prophecy had something to do with it. Your new title is 'Chief Vibes Officer'. With great power comes great responsibility, so what now?",
+    image: "images/promotion.webp",
     options: [
       { value: "A", text: "Rearrange the furniture and declare it feng shui." },
       { value: "B", text: "Host a team nap. HR says nothing." },
@@ -103,6 +114,7 @@ const REST_QUESTIONS = [
   },
   {
     text: "You receive a mysterious calendar invite from HR to the 13th floor (but everyone knows there is no 13th floor...). What do you do?",
+    image: "images/hrmeeting.webp",
     options: [
       { value: "A", text: "Accept the invite. What’s the worst that could happen?" },
       { value: "B", text: "Anxiously prepare a resignation letter (just in case they fire you)." },
@@ -123,7 +135,7 @@ function renderIntro() {
     <div class="container">
       <h1>Which Antiworker Are You?</h1>
       <p>Welcome to The Jobiverse™, a dimension where capitalism has gone rogue and HR is a sentient fax machine.</p>
-      <img src="images/antiworkers.png" alt="The Antiworkers" class="cover-image">
+      <img src="images/antiworkers.webp" alt="The Antiworkers" class="cover-image">
       <p align="center">
         <button class="btn-glow" onclick="renderSecondIntro()">Let's Go!</button>
       </p>
@@ -141,7 +153,7 @@ function renderSecondIntro() {
     <div class="container">
       <h2>Where am I?</h2>
       <p>You’ve just woken up at your desk with no memory of how you got here, but you do have an employee badge with your name misspelled and a mysterious onboarding letter.</p>
-      <img src="images/mysteriousletter.png" alt="The Antiworkers" class="cover-image">
+      <img src="images/intro.webp" alt="Mysterious Letter" class="cover-image">
       <p>✨Ready to find out which exhausted, adorable Antiworker lives inside you?</p>
       <button class="btn-glow" style="display:block; margin: 0 auto;" onclick="startQuiz()">Start Quiz</button>
     </div>
@@ -156,29 +168,50 @@ function startQuiz() {
 }
 
 function renderQuestion() {
-  if (qIndex < 5) {
-    setQuizBackground(qIndex + 1); // Q1-Q5
+  if (qIndex < 4) {
+    setQuizBackground(qIndex + 1); // Q1-Q4
     const q = QUESTIONS[qIndex];
     renderQuestionUI(q, qIndex + 1, QUESTIONS.length + 5);
-  } else if (qIndex === 5) {
-    setQuizBackground(6); // Branch Q6
+  } else if (qIndex === 4) { // Portal question
+    setQuizBackground(5);
+    const q = QUESTIONS[qIndex];
+    renderQuestionUI(q, qIndex + 1, QUESTIONS.length + 5);
+  } else if (qIndex === 5) { // New transition page
+    setQuizBackground(6);
+    renderTransitionPage();
+  } else if (qIndex === 6) { // Branch Q6
+    setQuizBackground(7);
     branch = answers[4];
     renderBranchQuestion();
-  } else if (qIndex === 6) {
-    setQuizBackground(7); // Q7
-    renderQuestionUI(REST_QUESTIONS[0], 7, QUESTIONS.length + 5);
   } else if (qIndex === 7) {
-    setQuizBackground(8); // Q8
-    renderQuestionUI(REST_QUESTIONS[1], 8, QUESTIONS.length + 5);
+    setQuizBackground(8); // Q7
+    renderQuestionUI(REST_QUESTIONS[0], 7, QUESTIONS.length + 5);
   } else if (qIndex === 8) {
-    setQuizBackground(9); // Q9
-    renderQuestionUI(REST_QUESTIONS[2], 9, QUESTIONS.length + 5);
+    setQuizBackground(9); // Q8
+    renderQuestionUI(REST_QUESTIONS[1], 8, QUESTIONS.length + 5);
   } else if (qIndex === 9) {
-    setQuizBackground(10); // Q10
-    renderQuestionUI(REST_QUESTIONS[3], 10, QUESTIONS.length + 5);
+    setQuizBackground(10); // Q9
+    renderQuestionUI(REST_QUESTIONS[2], 9, QUESTIONS.length + 5);
   } else if (qIndex === 10) {
+    setQuizBackground(11); // Q10
+    renderQuestionUI(REST_QUESTIONS[3], 10, QUESTIONS.length + 5);
+  } else if (qIndex === 11) {
     renderEnd();
   }
+}
+
+function renderTransitionPage() {
+  document.getElementById('app').innerHTML = `
+    <div class="container">
+      <p>You step through the portal, pulled by forces stronger than FOMO and less forgiving than HR. The scent of burnt popcorn is replaced by something older, perhaps stale ambition and unpaid overtime.</p>
+      <img src="images/portal.webp" alt="Jobiverse Portal" class="cover-image">
+      <p>Reality pixelates, the laws of physics take PTO, and you're suddenly defying gravity, hurtling straight into the Heart of the Jobiverse™.</p>
+      <button class="btn-glow" style="display:block; margin: 20px auto;" onclick="nextQuestion()">NEXT</button>
+      <div class="progress-bar-container">
+        <div class="progress-bar" style="width: 50%;"></div>
+      </div>
+    </div>
+  `;
 }
 
 function renderQuestionUI(q, number, total) {
@@ -186,6 +219,7 @@ function renderQuestionUI(q, number, total) {
   document.getElementById('app').innerHTML = `
     <form id="quizForm">
       <h2>${q.text}</h2>
+      ${q.image ? `<img src="${q.image}" alt="Question illustration" class="question-image">` : ''}
       <ul>
         ${q.options.map(opt => `
           <li>
@@ -210,6 +244,7 @@ function renderBranchQuestion() {
   document.getElementById('app').innerHTML = `
     <form id="quizForm">
       <h2>${bq.text}</h2>
+      ${bq.image ? `<img src="${bq.image}" alt="Question illustration" class="question-image">` : ''}
       <ul>
         ${bq.options.map(opt => `
           <li>
@@ -244,13 +279,18 @@ function renderEnd() {
   setQuizBackground(11)
   document.getElementById('app').innerHTML = `
     <div class="end-page" style="text-align: center;">
-      <p>
-        The HR Fax Machine begins to whir with divine purpose.<br>
-        The fax sparks, hums a victory jingle, and bursts into confetti made of recycled leave applications.
-      </p>
+      <p>The HR Fax Machine begins to whir with divine purpose.</p>
+      <img src="images/faxmachine.webp" alt="Fax Machine" class="cover-image">
+      <p>The fax sparks, hums a victory jingle, and bursts into confetti made of recycled leave applications.</p>
       <button class="btn-glow" onclick="renderResult()">VIEW MY RESULTS</button>
     </div>
   `;
+}
+
+// Helper function to advance to next question
+function nextQuestion() {
+  qIndex++;
+  renderQuestion();
 }
 
 function renderResult() {

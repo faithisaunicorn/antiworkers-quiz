@@ -1,5 +1,5 @@
 /*START OF 'UNDER CONSTRUCTION CODE, delete before launch*/
-
+/*
 <style>
  #construction-overlay {
    position: fixed;
@@ -31,13 +31,11 @@
   margin: 0.5rem 0;
 }
 
-/* Hide main content when under construction */
-
 body.under-construction #app {
   display: none;
 }
 </style>
-
+*/
 /*END OF 'UNDER CONSTRUCTION CODE, delete before launch*/
 
     /* Ensure Quicksand font for all buttons and inputs */
@@ -122,6 +120,15 @@ main {
   display: block;
   width: 100%;
   text-align: left;
+}
+
+.question-image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .result-action-btn {
